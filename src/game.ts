@@ -1,7 +1,10 @@
 import * as Phaser from 'phaser';
+import AppDefine from './define';
 
 export default class Demo extends Phaser.Scene
 {
+    zone : Phaser.GameObjects.Zone;
+
     constructor ()
     {
         super('demo');
@@ -9,38 +12,47 @@ export default class Demo extends Phaser.Scene
 
     preload ()
     {
-        this.load.image('logo', 'assets/phaser3-logo.png');
-        this.load.image('libs', 'assets/libs.png');
-        this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');
-        this.load.glsl('stars', 'assets/starfields.glsl.js');
+        this.zone = this.add.zone(AppDefine.GameWidth * 0.5, AppDefine.GameHeight * 0.5, AppDefine.GameWidth, AppDefine.GameHeight);
+        //this.load.image('logo', 'assets/phaser3-logo.png');
+        //this.load.image('libs', 'assets/libs.png');
+        //this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');
+        //this.load.glsl('stars', 'assets/starfields.glsl.js');
     }
 
     create ()
     {
-        this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);
+        this.drawBoard();
+    }
 
-        this.add.shader('Plasma', 0, 412, 800, 172).setOrigin(0);
+    drawBoard()
+    {
+        const board = this.add.container(0, 0);
+        Phaser.Display.Align.In.Center(board, this.zone);
 
-        this.add.image(400, 300, 'libs');
+        const row_max = 20;
+        const col_max = 20;
 
-        const logo = this.add.image(400, 70, 'logo');
+        const x_offset = -(row_max * AppDefine.BoardBlockSize) * 0.5;
+        const y_offset = -(col_max * AppDefine.BoardBlockSize) * 0.5;
 
-        this.tweens.add({
-            targets: logo,
-            y: 350,
-            duration: 1500,
-            ease: 'Sine.inOut',
-            yoyo: true,
-            repeat: -1
-        })
+        for(let row = 0; row < row_max; row++)
+        {
+            for(let col = 0; col < col_max; col++)
+            {
+                const block = this.add.rectangle(row * AppDefine.BoardBlockSize + x_offset, col * AppDefine.BoardBlockSize + y_offset, AppDefine.BoardBlockSize, AppDefine.BoardBlockSize, AppDefine.BoardFillColor);
+                block.setStrokeStyle(1, AppDefine.BoardStrokeColor);
+
+                board.add(block);
+            }
+        }
     }
 }
 
 const config = {
     type: Phaser.AUTO,
     backgroundColor: '#125555',
-    width: 800,
-    height: 600,
+    width: AppDefine.GameWidth,
+    height: AppDefine.GameHeight,
     scene: Demo
 };
 
