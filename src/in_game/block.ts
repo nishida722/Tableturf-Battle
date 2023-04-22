@@ -16,26 +16,47 @@ export default class Block extends Phaser.GameObjects.Rectangle
     col : number;
 
     //constructor(scene : Phaser.Scene, x : number, y : number, width : number, height : number, fillColor : number, fillAlpha : number)
-    constructor(scene : Phaser.Scene, block_type : number, row : number, col :number, x_offset : number, y_offset : number)
+    constructor(scene : Phaser.Scene, block_type : number, block_size : number, row : number, col :number, x_offset : number, y_offset : number, is_interactive : boolean)
     {
-        const x = row * AppDefine.BoardBlockSize + x_offset;
-        const y = col * AppDefine.BoardBlockSize + y_offset;
-        const width = AppDefine.BoardBlockSize;
-        const height = AppDefine.BoardBlockSize;
+        const y = row * block_size + x_offset;
+        const x = col * block_size + y_offset;
+        const width = block_size;
+        const height = block_size;
         
-        let fillColor = AppDefine.BoardFillColor;
-        let fillAlpha = 1;
-
-        super(scene, x, y, width, height, fillColor, fillAlpha);
+        super(scene, x, y, width, height);
+        this.setBlockType(block_type);
 
         this.row = row;
         this.col = col;
 
-        if(block_type == Block.BlockType.Empty)
+        if(is_interactive)
         {
             // ブロックがクリックされた時の処理を追加
             this.setInteractive();
             this.on('pointerdown', this.onPointerDown, this);
+        }
+    }
+
+    setBlockType(block_type : number)
+    {
+        switch(block_type)
+        {
+            case Block.BlockType.None:
+                this.setFillStyle(0x000000, 0);
+                this.setStrokeStyle(1, 0x000000, 0);
+                break;
+            case Block.BlockType.Empty:
+                this.setFillStyle(0x000000, 1);
+                this.setStrokeStyle(1, 0xffffff, 1);
+                break;
+            case Block.BlockType.Normal:
+                this.setFillStyle(0xffff00, 1);
+                this.setStrokeStyle(1, 0xffffff, 1);
+                break;
+            case Block.BlockType.Special:
+                this.setFillStyle(0xffa500, 1);
+                this.setStrokeStyle(1, 0xffffff, 1);
+                break;
         }
     }
 
