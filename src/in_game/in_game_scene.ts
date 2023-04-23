@@ -18,7 +18,7 @@ export default class InGame extends Phaser.Scene
         this.zone = this.add.zone(AppDefine.GameWidth * 0.5, AppDefine.GameHeight * 0.5, AppDefine.GameWidth, AppDefine.GameHeight);
 
         // データを読み込む
-        this.load.json('card_data', '/assets/data/card_data.json');
+        this.load.json('card_data', './assets/data/card_data.json');
     }
 
     create ()
