@@ -39,12 +39,13 @@ export default class InGame extends Phaser.Scene
         console.log(card_data_list);
         this.card_data_manager = new CardDataManager(card_data_list);
 
+        const max_card_id = 55;
 
         hand.addCard(
-            this.card_data_manager.getCardData(1),
-            this.card_data_manager.getCardData(2),
-            this.card_data_manager.getCardData(3),
-            this.card_data_manager.getCardData(4),
+            this.card_data_manager.getCardData(Math.floor(Math.random() * max_card_id) + 1),
+            this.card_data_manager.getCardData(Math.floor(Math.random() * max_card_id) + 1),
+            this.card_data_manager.getCardData(Math.floor(Math.random() * max_card_id) + 1),
+            this.card_data_manager.getCardData(Math.floor(Math.random() * max_card_id) + 1),
         );
     }
 }
