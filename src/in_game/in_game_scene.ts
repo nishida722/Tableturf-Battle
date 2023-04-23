@@ -3,10 +3,12 @@ import AppDefine from "../define/define";
 import Board from './board';
 import Hand from './hand';
 import CardData from '../data/card_data';
+import CardDataManager from '../data/card_data_manager';
 
 export default class InGame extends Phaser.Scene
 {
     zone : Phaser.GameObjects.Zone;
+    card_data_manager : CardDataManager;
 
     constructor ()
     {
@@ -35,9 +37,14 @@ export default class InGame extends Phaser.Scene
 
         const card_data_list = this.cache.json.get('card_data');
         console.log(card_data_list);
+        this.card_data_manager = new CardDataManager(card_data_list);
 
 
-        let card = new CardData(card_data_list[0]);
-        hand.addCard(card);
+        hand.addCard(
+            this.card_data_manager.getCardData(1),
+            this.card_data_manager.getCardData(2),
+            this.card_data_manager.getCardData(3),
+            this.card_data_manager.getCardData(4),
+        );
     }
 }

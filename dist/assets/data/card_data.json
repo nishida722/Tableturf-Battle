@@ -1,34 +1,796 @@
 [
-    {
-        "id" : 1,
-        "name" : "card_01",
-        "blocks" : 
-        [
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,3,1,1,1],
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,1,1,1,1,1]
-        ]
-    },
-    {
-        "id" : 2,
-        "name" : "card_02",
-        "blocks" : 
-        [
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,1,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,2,1,1,1,1],
-            [1,1,1,1,1,1,1,1]
-        ]
-    }
-        
+	{
+		"id": 1,
+		"rarity": 3,
+		"name_jp": "ヒーローシューター",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[2,2,2,2,2],
+			[2,2,2,3,2],
+			[0,2,0,0,0],
+			[2,0,0,0,0]
+		]
+	},
+	{
+		"id": 2,
+		"rarity": 1,
+		"name_jp": "ボールドマーカー",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,3,0,2],
+			[2,2,2,2],
+			[0,2,0,2]
+		]
+	},
+	{
+		"id": 3,
+		"rarity": 1,
+		"name_jp": "わかばシューター",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[2,3,2],
+			[2,0,0]
+		]
+	},
+	{
+		"id": 4,
+		"rarity": 1,
+		"name_jp": "シャープマーカー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,2,0],
+			[2,2,2,3],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 5,
+		"rarity": 1,
+		"name_jp": "プロモデラーMG",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,3,0,0],
+			[2,2,2,2],
+			[0,2,0,0]
+		]
+	},
+	{
+		"id": 6,
+		"rarity": 1,
+		"name_jp": "スプラシューター",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,3,0],
+			[2,2,2,2],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 7,
+		"rarity": 1,
+		"name_jp": ".52ガロン",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,3],
+			[0,2,2,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 8,
+		"rarity": 1,
+		"name_jp": "N-ZAP85",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[2,2,3,2],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 9,
+		"rarity": 1,
+		"name_jp": "プライムシューター",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,0,2,3,0],
+			[2,2,2,2,2,2],
+			[0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 10,
+		"rarity": 1,
+		"name_jp": ".96ガロン",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,2,3],
+			[0,2,2,2,0,0],
+			[2,0,0,0,0,0]
+		]
+	},
+	{
+		"id": 11,
+		"rarity": 1,
+		"name_jp": "ジェットスイーパー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,3,2,2,2,2],
+			[2,0,0,0,0,0],
+			[2,2,2,0,0,0]
+		]
+	},
+	{
+		"id": 12,
+		"rarity": 1,
+		"name_jp": "ノヴァブラスター",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,0,3],
+			[2,2,2,0],
+			[0,2,2,0],
+			[0,2,0,0]
+		]
+	},
+	{
+		"id": 13,
+		"rarity": 1,
+		"name_jp": "ホットブラスター",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,0,0,2,3],
+			[0,2,2,2,2],
+			[0,2,0,0,0]
+		]
+	},
+	{
+		"id": 14,
+		"rarity": 1,
+		"name_jp": "ロングブラスター",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,0,0,0,2,3],
+			[0,2,2,2,2,2],
+			[0,2,0,0,0,0]
+		]
+	},
+	{
+		"id": 15,
+		"rarity": 1,
+		"name_jp": "クラッシュブラスター",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,2,2,2],
+			[2,2,2,3],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 16,
+		"rarity": 1,
+		"name_jp": "ラピッドブラスター",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,3,2],
+			[2,2,2,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 17,
+		"rarity": 1,
+		"name_jp": "Rブラスターエリート",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,2],
+			[2,2,3,0,0],
+			[2,0,0,0,0]
+		]
+	},
+	{
+		"id": 18,
+		"rarity": 1,
+		"name_jp": "L3リールガン",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,3,2,2],
+			[2,2,0,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 19,
+		"rarity": 1,
+		"name_jp": "H3リールガン",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,3,2],
+			[2,2,0,0,0],
+			[2,0,0,0,0]
+		]
+	},
+	{
+		"id": 20,
+		"rarity": 1,
+		"name_jp": "H3リールガン",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,0,3],
+			[0,0,2,0],
+			[2,2,0,0],
+			[2,2,0,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 21,
+		"rarity": 1,
+		"name_jp": "カーボンローラー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2],
+			[0,2,3,0],
+			[0,0,2,0]
+		]
+	},
+	{
+		"id": 22,
+		"rarity": 1,
+		"name_jp": "スプラローラー",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,3,2,2],
+			[0,0,2,2,2],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 23,
+		"rarity": 1,
+		"name_jp": "ダイナモローラー",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[2,2,2,2,2,2,2],
+			[0,0,0,3,2,2,2],
+			[0,0,0,2,0,0,0],
+			[0,0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 24,
+		"rarity": 1,
+		"name_jp": "ヴァリアブルローラー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,3,2,2],
+			[0,0,2,2,0],
+			[0,0,2,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 25,
+		"rarity": 1,
+		"name_jp": "パブロ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,0,3,2],
+			[0,0,0,2,2],
+			[0,0,2,0,0],
+			[0,2,0,0,0],
+			[2,0,0,0,0]
+		]
+	},
+	{
+		"id": 26,
+		"rarity": 1,
+		"name_jp": "ホクサイ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,0,0,2,0],
+			[0,0,0,3,2,2],
+			[0,0,0,2,2,0],
+			[0,0,2,0,0,0],
+			[0,2,0,0,0,0],
+			[2,0,0,0,0,0]
+		]
+	},
+	{
+		"id": 27,
+		"rarity": 1,
+		"name_jp": "スクイックリンα",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2,2,2],
+			[2,3,0,0,0,0]
+		]
+	},
+	{
+		"id": 28,
+		"rarity": 1,
+		"name_jp": "スプラチャージャー",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2,2,2,2],
+			[0,0,3,0,0,0,0]
+		]
+	},
+	{
+		"id": 29,
+		"rarity": 1,
+		"name_jp": "スプラスコープ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,2,3,0,0,0],
+			[2,2,2,2,2,2,2],
+			[0,0,2,0,0,0,0]
+		]
+	},
+	{
+		"id": 30,
+		"rarity": 1,
+		"name_jp": "リッター4K",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,2,2,2],
+			[2,2,2,0,0,3,0]
+		]
+	},
+	{
+		"id": 31,
+		"rarity": 1,
+		"name_jp": "4Kスコープ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[0,0,0,2,3,0,0],
+			[2,2,2,2,2,2,2],
+			[2,2,2,0,0,2,0]
+		]
+	},
+	{
+		"id": 32,
+		"rarity": 1,
+		"name_jp": "14式竹筒銃・甲",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,0,0,0,2],
+			[2,3,2,2,2]
+		]
+	},
+	{
+		"id": 33,
+		"rarity": 1,
+		"name_jp": "ソイチューバー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,2,2],
+			[2,2,3,0,2,0],
+			[0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 34,
+		"rarity": 1,
+		"name_jp": "バケットスロッシャー",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,0,0],
+			[0,3,2],
+			[2,2,2]
+		]
+	},
+	{
+		"id": 35,
+		"rarity": 1,
+		"name_jp": "ヒッセン",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[2,0],
+			[2,3],
+			[2,2]
+		]
+	},
+	{
+		"id": 36,
+		"rarity": 1,
+		"name_jp": "ヒッセン",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,3,2],
+			[0,2,2],
+			[0,2,2]
+		]
+	},
+	{
+		"id": 37,
+		"rarity": 1,
+		"name_jp": "ヒッセン",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,0,0,0,0],
+			[3,2,2,2,2],
+			[2,2,2,2,0]
+		]
+	},
+	{
+		"id": 38,
+		"rarity": 1,
+		"name_jp": "エクスプロッシャー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,0,0,2,0],
+			[2,2,2,2,0],
+			[2,2,2,2,3]
+		]
+	},
+	{
+		"id": 39,
+		"rarity": 1,
+		"name_jp": "スプラスピナー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2,3],
+			[2,2,0,0,0]
+		]
+	},
+	{
+		"id": 40,
+		"rarity": 1,
+		"name_jp": "バレルスピナー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[2,2,0,0,0],
+			[2,2,0,0,0],
+			[2,2,0,0,0],
+			[0,2,2,0,0],
+			[0,0,2,3,0],
+			[0,0,0,2,2]
+		]
+	},
+	{
+		"id": 41,
+		"rarity": 1,
+		"name_jp": "ハイドラント",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[2,2,0,0,0,0],
+			[2,2,0,0,0,0],
+			[2,2,2,2,2,3],
+			[0,2,2,2,0,0]
+		]
+	},
+	{
+		"id": 42,
+		"rarity": 1,
+		"name_jp": "クーゲルシュライバー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,2,0,0,0],
+			[2,2,2,2,0],
+			[2,2,2,3,2]
+		]
+	},
+	{
+		"id": 43,
+		"rarity": 1,
+		"name_jp": "ノーチラス47",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,0,0,0],
+			[2,2,0,0,0],
+			[2,2,2,2,3]
+		]
+	},
+	{
+		"id": 44,
+		"rarity": 1,
+		"name_jp": "スパッタリー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2],
+			[2,0,3],
+			[0,2,2]
+		]
+	},
+	{
+		"id": 45,
+		"rarity": 1,
+		"name_jp": "スプラマニューバー",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,2,2,2,2],
+			[0,2,3,0,0],
+			[2,2,0,0,0]
+		]
+	},
+	{
+		"id": 46,
+		"rarity": 1,
+		"name_jp": "ケルビン525",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,2,0],
+			[2,2,2,3],
+			[0,2,2,0],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 47,
+		"rarity": 1,
+		"name_jp": "ディアルスイーパー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,0,0,0],
+			[2,2,2,2,2],
+			[3,0,0,0,0],
+			[2,2,0,0,0]
+		]
+	},
+	{
+		"id": 48,
+		"rarity": 1,
+		"name_jp": "クアッドホッパーブラック",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,2,3,2],
+			[2,0,2,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 49,
+		"rarity": 1,
+		"name_jp": "パラシェルター",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,0,2,2,0],
+			[0,2,3,2,2],
+			[2,0,2,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 50,
+		"rarity": 1,
+		"name_jp": "キャンピングシェルター",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"blocks": [
+			[0,2,2,0],
+			[0,0,2,2],
+			[0,2,3,2],
+			[2,0,2,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 51,
+		"rarity": 1,
+		"name_jp": "スパイガジェット",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,2,0,0],
+			[0,0,2,0],
+			[2,2,0,3],
+			[2,0,2,0],
+			[0,2,0,0]
+		]
+	},
+	{
+		"id": 52,
+		"rarity": 1,
+		"name_jp": "トライストリンガー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,3,2,2,2],
+			[2,0,2,0,0],
+			[2,2,0,0,0],
+			[2,0,0,0,0],
+			[2,0,0,0,0]
+		]
+	},
+	{
+		"id": 53,
+		"rarity": 1,
+		"name_jp": "LACT-450",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,0,2,2],
+			[0,3,2,0],
+			[2,2,2,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 54,
+		"rarity": 1,
+		"name_jp": "ジムワイパー",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[3],
+			[2],
+			[2],
+			[2],
+			[2],
+			[2]
+		]
+	},
+	{
+		"id": 55,
+		"rarity": 1,
+		"name_jp": "ドライブワイパー",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[3],
+			[2],
+			[2],
+			[2],
+			[2]
+		]
+	}
 ]
-

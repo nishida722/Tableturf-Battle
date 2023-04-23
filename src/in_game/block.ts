@@ -47,15 +47,15 @@ export default class Block extends Phaser.GameObjects.Rectangle
                 break;
             case Block.BlockType.Empty:
                 this.setFillStyle(0x000000, 1);
-                this.setStrokeStyle(1, 0xffffff, 1);
+                this.setStrokeStyle(1, 0x808080, 1);
                 break;
             case Block.BlockType.Normal:
                 this.setFillStyle(0xffff00, 1);
-                this.setStrokeStyle(1, 0xffffff, 1);
+                this.setStrokeStyle(1, 0x808080, 1);
                 break;
             case Block.BlockType.Special:
                 this.setFillStyle(0xffa500, 1);
-                this.setStrokeStyle(1, 0xffffff, 1);
+                this.setStrokeStyle(1, 0x808080, 1);
                 break;
         }
     }

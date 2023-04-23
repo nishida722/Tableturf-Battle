@@ -6,4 +6,8 @@ export default class AppDefine
     static readonly BoardBlockSize = 30;
     static readonly BoardFillColor = 0x000000;
     static readonly BoardStrokeColor = 0xffffff;
+
+    static readonly BaseCardWidth = 130;
+    static readonly BaseCardHeight = 180;
+    
 }
