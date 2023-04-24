@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import AppDefine from './define/define';
+import AppDefine from './define/app_define';
 import InGame from './in_game/in_game_scene';
 
 const config = {

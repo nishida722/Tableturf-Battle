@@ -10,4 +10,11 @@ export default class AppDefine
     static readonly BaseCardWidth = 130;
     static readonly BaseCardHeight = 180;
     
+    // ブロックを配置する方向の定数定義
+    static readonly Direction = {
+        Up : 0,
+        Right : 1,
+        Down : 2,
+        Left : 3,
+    };
 }

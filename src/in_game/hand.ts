@@ -1,12 +1,14 @@
 import * as Phaser from 'phaser';
 import Card from './card';
 import CardData from '../data/card_data';
-import AppDefine from '../define/define';
+import AppDefine from '../define/app_define';
 
 export default class Hand extends Phaser.GameObjects.Container
 {
     card_data_list : CardData[];
     card_list : Card[];
+
+    select_card : Card;
 
     private readonly card_scale = 1.2;
 
@@ -26,7 +28,7 @@ export default class Hand extends Phaser.GameObjects.Container
         this.card_list = [];
     }
 
-    addCard(...card_data : CardData[])
+    addCard = (...card_data : CardData[]) =>
     {
         this.card_data_list.push(...card_data);
 
@@ -34,6 +36,8 @@ export default class Hand extends Phaser.GameObjects.Container
         { 
             const card = new Card(this.scene, card_data[i]);
             card.setScale(this.card_scale, this.card_scale);
+            card.on_click = this.onClickCard;
+
             this.add(card);
             this.card_list.push(card);
         }
@@ -41,7 +45,7 @@ export default class Hand extends Phaser.GameObjects.Container
         this.updateCardPos();
     }
 
-    updateCardPos()
+    updateCardPos = () =>
     {
         const card_width = AppDefine.BaseCardWidth * this.card_scale;
         const card_height = AppDefine.BaseCardHeight * this.card_scale;
@@ -55,5 +59,14 @@ export default class Hand extends Phaser.GameObjects.Container
             x: -(card_width + card_margin) * 0.5,
             y: -(card_height + card_margin) * 0.5
 		});
+    }
+
+    onClickCard = (card : Card) =>
+    {
+        console.log("onClickCard");
+
+        if(this.select_card) this.select_card.setSelect(false);
+        this.select_card = card;
+        this.select_card.setSelect(true);
     }
 }

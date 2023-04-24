@@ -1,5 +1,5 @@
 import * as Phaser from 'phaser';
-import AppDefine from "../define/define";
+import AppDefine from "../define/app_define";
 
 export default class Block extends Phaser.GameObjects.Rectangle
 {
@@ -15,7 +15,9 @@ export default class Block extends Phaser.GameObjects.Rectangle
     row : number;
     col : number;
 
-    //constructor(scene : Phaser.Scene, x : number, y : number, width : number, height : number, fillColor : number, fillAlpha : number)
+    on_click_callback : (x, y) => void;
+    on_over_callback : (x, y) => void;
+
     constructor(scene : Phaser.Scene, block_type : number, block_size : number, row : number, col :number, x_offset : number, y_offset : number, is_interactive : boolean)
     {
         const y = row * block_size + x_offset;
@@ -34,10 +36,13 @@ export default class Block extends Phaser.GameObjects.Rectangle
             // ブロックがクリックされた時の処理を追加
             this.setInteractive();
             this.on('pointerdown', this.onPointerDown, this);
+
+            // ブロックがマウスオーバーされた時の処理を追加
+            this.on('pointerover', this.onPointerOver, this);
         }
     }
 
-    setBlockType(block_type : number)
+    setBlockType = (block_type : number) =>
     {
         switch(block_type)
         {
@@ -61,9 +66,15 @@ export default class Block extends Phaser.GameObjects.Rectangle
     }
 
     // ブロックがクリックされた時の処理
-    onPointerDown()
+    onPointerDown = () =>
     {
-        console.log("row:" + this.row + " col:" + this.col);
+        this.on_click_callback(this.col, this.row);
+    }
+
+    // ブロックがマウスオーバーされた時の処理
+    onPointerOver = () =>
+    {
+        this.on_over_callback(this.col, this.row);
     }
 
 }

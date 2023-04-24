@@ -2,22 +2,34 @@ import * as Phaser from 'phaser';
 import Board from './board';
 import CardData from '../data/card_data';
 import Block from './block';
-import AppDefine from '../define/define';
+import AppDefine from '../define/app_define';
 
 export default class Card extends Phaser.GameObjects.Container
 {
+    card_data : CardData;
+
+    on_click : (card : Card) => void;
+
+    mask_graphics : Phaser.GameObjects.Graphics;
+
     constructor(scene : Phaser.Scene, card_data : CardData)
     {
         super(scene, 0, 0);
+
+        this.card_data = card_data;
 
         // カードのような見た目を作る
         const card_width = AppDefine.BaseCardWidth;
         const card_height = AppDefine.BaseCardHeight;
 
         const bg_graphics = new Phaser.GameObjects.Graphics(this.scene);
+        this.add(bg_graphics);
         bg_graphics.fillStyle(0xcccccc, 1);
         bg_graphics.fillRoundedRect(-card_width * 0.5, -card_height * 0.5, card_width, card_height, 10);
-        this.add(bg_graphics);
+        bg_graphics.setInteractive(new Phaser.Geom.Rectangle(-card_width * 0.5, -card_height * 0.5, card_width, card_height), Phaser.Geom.Rectangle.Contains);
+        bg_graphics.on('pointerdown', () => {
+           if(this.on_click) this.on_click(this);
+        });
         
         // ボードを作成
         const board = new Board(scene, 8, 8, 15, false);
@@ -65,5 +77,27 @@ export default class Card extends Phaser.GameObjects.Container
 			cellWidth: sp_point_block_size + 2,
 			cellHeight: sp_point_block_size + 2,
 		});
+
+        this.mask_graphics = new Phaser.GameObjects.Graphics(this.scene);
+        this.add(this.mask_graphics);
+
+        this.setSelect(false);
+    }
+
+    // カードを選択状態にする
+    setSelect = (is_select : boolean) =>
+    {
+        if(is_select)
+        {
+            this.mask_graphics.clear();
+            this.mask_graphics.fillStyle(0x000000, 0);
+            this.mask_graphics.fillRoundedRect(-AppDefine.BaseCardWidth * 0.5, -AppDefine.BaseCardHeight * 0.5, AppDefine.BaseCardWidth, AppDefine.BaseCardHeight, 10);
+        }
+        else
+        {
+            this.mask_graphics.clear();
+            this.mask_graphics.fillStyle(0x000000, 0.4);
+            this.mask_graphics.fillRoundedRect(-AppDefine.BaseCardWidth * 0.5, -AppDefine.BaseCardHeight * 0.5, AppDefine.BaseCardWidth, AppDefine.BaseCardHeight, 10);
+        }
     }
 }

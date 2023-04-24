@@ -1,3 +1,5 @@
+import AppDefine from "../define/app_define";
+
 export default class CardData
 {
     id : number;
@@ -35,13 +37,72 @@ export default class CardData
         }
     }
 
-    get col_max() : number
+    getColMax = (direction : number) : number =>
     {
-        return this.block_width;
+        // directionに応じて回転させたblocksの列数を返す
+        switch(direction)
+        {
+            case AppDefine.Direction.Up:
+            case AppDefine.Direction.Down:
+                return this.block_width;
+            case AppDefine.Direction.Right:
+            case AppDefine.Direction.Left:
+                return this.block_height;
+        }
     }
 
-    get row_max() : number
+    getRowMax = (direction : number) : number =>
     {
-        return this.block_height;
+        // directionに応じて回転させたblocksの行数を返す
+        switch(direction)
+        {
+            case AppDefine.Direction.Up:
+            case AppDefine.Direction.Down:
+                return this.block_height;
+            case AppDefine.Direction.Right:
+            case AppDefine.Direction.Left:
+                return this.block_width;
+        }
+    }
+
+    // カードを回転させる
+    getBlocks = (direction : number) : number[][] =>
+    {
+        // 値渡しになるようにコピー
+        const blocks = [...this.blocks];
+
+        // number[][]型のblocksをdirectionに応じて回転させる
+        switch(direction)
+        {
+            case AppDefine.Direction.Up:
+                return blocks;
+            case AppDefine.Direction.Right:
+                return this.rotateRightBlocks(blocks);
+            case AppDefine.Direction.Down:
+                return this.rotateRightBlocks(this.rotateRightBlocks(blocks));
+            case AppDefine.Direction.Left:
+                return this.rotateRightBlocks(this.rotateRightBlocks(this.rotateRightBlocks(blocks)));
+        }
+    }
+
+    // number[][]型のblocksを時計回りに90度回転させる
+    private rotateRightBlocks = (blocks : number[][]) : number[][] =>
+    {
+        const rotate_blocks : number[][] = [];
+
+        for(let row = 0; row < blocks.length; row++)
+        {
+            for(let col = 0; col < blocks[row].length; col++)
+            {
+                if(rotate_blocks[col] === undefined)
+                {
+                    rotate_blocks[col] = [];
+                }
+
+                rotate_blocks[col][blocks.length - row - 1] = blocks[row][col];
+            }
+        }
+
+        return rotate_blocks;
     }
 }
