@@ -2,46 +2,90 @@ import * as Phaser from 'phaser';
 import AppDefine from "../define/app_define";
 import Block from './block';
 import CardData from '../data/card_data';
+import BlockObjectPool from './block_object_pool';
 
 export default class Board extends Phaser.GameObjects.Container
 {
+    // レイヤータイプ
+    static LayerType = {
+        Background : 0,
+        Main : 1,
+        Preview : 2,
+    }
+
     row_max : number;
     col_max : number;
-    bg_blocks : Block[][];
-    main_blocks : Block[][];
-    preview_blocks : Block[][];
+
+    // ディクショナリ<LayerType,Block[][]>を追加
+    blocks_dict :{ [key: number]: Block[][]; } = {};
+
+    // ブロックの描画順を管理する為のコンテナ
+    blocks_layer_dict :{ [key: number]: Phaser.GameObjects.Container; } = {};
 
     current_preview_block_list : Block[];
+    preview_object_pool_dict : { [key: number]: BlockObjectPool<Block>; } = {};
     current_block_direction : number;
 
     cursor_x : number;    // カーソル位置X
     cursor_y : number;    // カーソル位置Y
 
+    private x_offset : number;
+    private y_offset : number;
+
+    private block_size : number;
+
+    private is_interactive_board : boolean;
+
     on_click_board_callback : (x, y) => void;
     on_over_board_callback : (x, y) => void;
 
-    constructor(scene : Phaser.Scene, row_max : number, col_max : number, block_size : number, is_interactive : boolean)
+    constructor(scene : Phaser.Scene, row_max : number, col_max : number, block_size : number, is_interactive_board : boolean)
     {
         super(scene, 0, 0);
 
         this.row_max = row_max;
         this.col_max = col_max;
 
-        const y_offset = -(row_max * block_size) * 0.5 + (block_size * 0.5);
-        const x_offset = -(col_max * block_size) * 0.5 + (block_size * 0.5);
+        this.y_offset = -(row_max * block_size) * 0.5 + (block_size * 0.5);
+        this.x_offset = -(col_max * block_size) * 0.5 + (block_size * 0.5);
 
-        this.bg_blocks = this.createBoard(Block.BlockType.Empty, block_size, x_offset, y_offset, is_interactive);
-        this.main_blocks = this.createBoard(Block.BlockType.None, block_size, x_offset, y_offset, false);
-        this.preview_blocks = this.createBoard(Block.BlockType.None, block_size, x_offset, y_offset, false);
+        this.block_size = block_size;
 
-        this.current_preview_block_list = null;
+        this.is_interactive_board = is_interactive_board;
+
+        this.blocks_layer_dict =
+        {
+            [Board.LayerType.Background] : new Phaser.GameObjects.Container(this.scene, 0, 0),
+            [Board.LayerType.Main] : new Phaser.GameObjects.Container(this.scene, 0, 0),
+            [Board.LayerType.Preview] : new Phaser.GameObjects.Container(this.scene, 0, 0),
+        };
+        this.add(this.blocks_layer_dict[Board.LayerType.Background]);
+        this.add(this.blocks_layer_dict[Board.LayerType.Main]);
+        this.add(this.blocks_layer_dict[Board.LayerType.Preview]);
+        
+
+        this.blocks_dict =
+        {
+            [Board.LayerType.Background] : this.createBoard(Board.LayerType.Background, Block.BlockType.Empty),
+            [Board.LayerType.Main] : this.createBoard(Board.LayerType.Main, Block.BlockType.None),
+            [Board.LayerType.Preview] : this.createBoard(Board.LayerType.Preview, Block.BlockType.None),
+        };
+
+        //this.current_preview_block_list = null;
+        this.preview_object_pool_dict = 
+        {
+            [Block.BlockType.Normal] : new BlockObjectPool<Block>(),
+            [Block.BlockType.Special] : new BlockObjectPool<Block>(),
+        };
+
+
         this.current_block_direction = AppDefine.Direction.Up;
 
         // マウスホイールでブロックを回転させる為のイベントを登録
         this.scene.input.on('wheel', this.onWheel, this);
     }
 
-    private createBoard = (block_type : number, block_size : number, x_offset : number, y_offset :  number , is_interactive : boolean) : Block[][] =>
+    private createBoard = (layer_type : number , fill_block_type : number) : Block[][] =>
     {
         const blocks = [];
 
@@ -49,10 +93,13 @@ export default class Board extends Phaser.GameObjects.Container
         {
             for(let col = 0; col < this.col_max; col++)
             {
-                const block = new Block(this.scene, block_type, block_size, row, col, x_offset, y_offset, is_interactive);
-                block.on_click_callback = this.onClickBoard;
-                block.on_over_callback = this.onOverBoard;
-                this.add(block);
+                let block = null;
+                
+                // Noneの場合はブロックを作成しない
+                if(fill_block_type != Block.BlockType.None)
+                {
+                    block = this.createBlock(layer_type, fill_block_type, row, col);
+                }
                 
                 if(blocks[row] == null)
                 {
@@ -65,7 +112,20 @@ export default class Board extends Phaser.GameObjects.Container
         return blocks;
     }
 
-    setBlocks = (x: number, y: number, blocks : number[][], target_blocks : Block[][]) : Block[] =>
+    createBlock = (layer_type : number, block_type : number, row : number, col : number) : Block =>
+    {
+        const is_interactive = (layer_type == Board.LayerType.Background) && this.is_interactive_board;
+        const is_preview = (layer_type == Board.LayerType.Preview);
+
+        const block = new Block(this.scene, block_type, this.block_size, row, col, this.x_offset, this.y_offset, is_interactive, is_preview);
+        this.blocks_layer_dict[layer_type].add(block);
+        block.on_click_callback = this.onClickBoard;
+        block.on_over_callback = this.onOverBoard;
+
+        return block;
+    }
+
+    setBlocks = (layer_type : number, x: number, y: number, blocks : number[][]) : Block[] =>
     {
         const update_block_list : Block[] = [];
         
@@ -83,13 +143,27 @@ export default class Board extends Phaser.GameObjects.Container
 
                 if(set_row >= 0 && set_row < this.row_max && set_col >= 0 && set_col < this.col_max)
                 {
-                    target_blocks[set_row][set_col].setBlockType(block_type);
-                    update_block_list.push(target_blocks[set_row][set_col]);
+                    const block = this.getBlock(layer_type, set_col, set_row);
+
+                    block.setBlockType(block_type);
+                    update_block_list.push(block);
                 }
             }
         }
 
         return update_block_list;
+    }
+
+    getBlock = (layer_type : number, x: number, y: number) : Block =>
+    {
+        const target_blocks = this.blocks_dict[layer_type];
+
+        if(!target_blocks[y][x])
+        {
+            target_blocks[y][x] = this.createBlock(layer_type, Block.BlockType.None, y, x);
+        }
+
+        return target_blocks[y][x];
     }
 
     setHandCard = (card_data: CardData) =>
@@ -104,13 +178,13 @@ export default class Board extends Phaser.GameObjects.Container
         const x_offset = Math.ceil((card_data.getColMax(direction)) * 0.5) - 1;
         const y_offset = Math.ceil((card_data.getRowMax(direction)) * 0.5) - 1;
 
-        this.setBlocks(x - x_offset, y - y_offset, card_data.getBlocks(direction), this.main_blocks);
+        this.setBlocks(Board.LayerType.Main, x - x_offset, y - y_offset, card_data.getBlocks(direction));
     }
 
     setPreviewCard = (x: number, y: number, card_data: CardData) =>
     {
         console.log("setPreviewCard : " + x + ", " + y);
-
+/*
         // プレビュー表示中のブロックをクリア
         if(this.current_preview_block_list)
         {
@@ -126,7 +200,8 @@ export default class Board extends Phaser.GameObjects.Container
         const x_offset = Math.ceil((card_data.getColMax(this.current_block_direction)) * 0.5) - 1;
         const y_offset = Math.ceil((card_data.getRowMax(this.current_block_direction)) * 0.5) - 1;
 
-        this.current_preview_block_list = this.setBlocks(x - x_offset, y - y_offset, card_data.getBlocks(this.current_block_direction), this.preview_blocks);
+        this.current_preview_block_list = this.setBlocks(Board.LayerType.Preview, x - x_offset, y - y_offset, card_data.getBlocks(this.current_block_direction));
+*/
     }
 
     setBoardCard = (x: number, y: number, card_data: CardData) =>
@@ -137,7 +212,7 @@ export default class Board extends Phaser.GameObjects.Container
         const x_offset = Math.ceil((card_data.getColMax(this.current_block_direction)) * 0.5) - 1;
         const y_offset = Math.ceil((card_data.getRowMax(this.current_block_direction)) * 0.5) - 1;
 
-        this.setBlocks(x - x_offset, y - y_offset, card_data.getBlocks(this.current_block_direction), this.main_blocks);
+        this.setBlocks(Board.LayerType.Main, x - x_offset, y - y_offset, card_data.getBlocks(this.current_block_direction));
     }
 
     onClickBoard = (x : number, y : number) =>

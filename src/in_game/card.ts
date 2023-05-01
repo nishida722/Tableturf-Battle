@@ -53,20 +53,20 @@ export default class Card extends Phaser.GameObjects.Container
         block_num.add(block_num_bg);
 
         // ブロック数を表示
-        const block_num_text = new Phaser.GameObjects.Text(this.scene, 0, 0, card_data.block_num.toString(), { color: '#ffffff', fontSize: '28px' });
+        const block_num_text = new Phaser.GameObjects.Text(this.scene, 0, 0, card_data.block_num.toString(), { color: '#ffffff', fontSize: '28px' ,fontFamily: 'Arial Black'});
         block_num_text.setOrigin(0.5);
         block_num.add(block_num_text);
 
         // SPポイント表示
         const sp_point = new Phaser.GameObjects.Container(this.scene);
-        sp_point.setPosition(-15, 50);
+        sp_point.setPosition(-10, 50);
         this.add(sp_point);
 
         const sp_point_block_size = 10;
         const sp_point_block_list = [];
         for (let col = 0; col < card_data.sp_point; col++)
         {
-            const sp_point_block = new Block(this.scene, Block.BlockType.Special, sp_point_block_size, 0, col, 0, 0, false);
+            const sp_point_block = new Block(this.scene, Block.BlockType.Special, sp_point_block_size, 0, col, 0, 0, false, false);
             sp_point.add(sp_point_block);
             sp_point_block_list.push(sp_point_block);
         }
@@ -74,8 +74,8 @@ export default class Card extends Phaser.GameObjects.Container
         Phaser.Actions.GridAlign(sp_point_block_list, {
 			width: 6,
 			height: 2,
-			cellWidth: sp_point_block_size + 2,
-			cellHeight: sp_point_block_size + 2,
+			cellWidth: sp_point_block_size + 3,
+			cellHeight: sp_point_block_size + 3,
 		});
 
         this.mask_graphics = new Phaser.GameObjects.Graphics(this.scene);

@@ -1,7 +1,7 @@
 export default class AppDefine
 {
-    static readonly GameWidth = 1920;
-    static readonly GameHeight = 1080;
+    static readonly  SIZE_WIDTH_SCREEN = 540
+    static readonly  SIZE_HEIGHT_SCREEN = 960
 
     static readonly BoardBlockSize = 30;
     static readonly BoardFillColor = 0x000000;

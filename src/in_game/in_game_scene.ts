@@ -19,16 +19,19 @@ export default class InGame extends Phaser.Scene
 
     preload = () =>
     {
-        this.zone = this.add.zone(AppDefine.GameWidth * 0.5, AppDefine.GameHeight * 0.5, AppDefine.GameWidth, AppDefine.GameHeight);
+        this.zone = this.add.zone(AppDefine.SIZE_WIDTH_SCREEN * 0.5, AppDefine.SIZE_HEIGHT_SCREEN * 0.5, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN);
 
         // データを読み込む
         this.load.json('card_data', './assets/data/card_data.json');
+
+        this.load.glsl('White Stripes', './assets/shaders/stripe.glsl.js');
+        this.load.glsl('White Dots', './assets/shaders/dots.glsl.js');
     }
 
     create = () =>
     {
         // ボードを作成
-        this.board = new Board(this, 20, 20, AppDefine.BoardBlockSize, true);
+        this.board = new Board(this, 15, 15, AppDefine.BoardBlockSize, true);
         this.add.existing(this.board);
         Phaser.Display.Align.In.Center(this.board, this.zone, 100, 0);
         this.board.on_click_board_callback = this.onClickBoard;
