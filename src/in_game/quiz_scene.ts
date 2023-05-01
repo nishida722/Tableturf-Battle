@@ -27,6 +27,8 @@ export default class Quiz extends Phaser.Scene
     {
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
+        this.add.graphics().fillStyle(0x000000, 0.6).fillRect(0, 80, AppDefine.SIZE_WIDTH_SCREEN, 400);
+
         const card_data_list = this.cache.json.get('card_data');
         console.log(card_data_list);
         this.card_data_manager = new CardDataManager(card_data_list);
@@ -34,7 +36,7 @@ export default class Quiz extends Phaser.Scene
         const max_card_id = 55;
 
         let card = new Card(this,  this.card_data_manager.getCardData(Math.floor(Math.random() * max_card_id) + 1));
-        card.setScale(2.0, 2.0);
+        card.setScale(1.5, 1.5);
         card.setSelect(true);
         this.add.existing(card);
         Phaser.Display.Align.In.Center(card, this.zone, 0, -200);
