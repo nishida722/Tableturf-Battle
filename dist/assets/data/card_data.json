@@ -268,7 +268,7 @@
 	{
 		"id": 20,
 		"rarity": 1,
-		"name_jp": "H3リールガン",
+		"name_jp": "ボトルガイザー",
 		"name_en": "",
 		"block_num": 7,
 		"sp_block_num": 1,
@@ -791,6 +791,48 @@
 			[2],
 			[2],
 			[2]
+		]
+	},
+	{
+		"id": 167,
+		"rarity": 1,
+		"name_jp": "スペースシューター",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,0],
+			[2,2,2,2,3],
+			[0,2,0,0,0]
+		]
+	},
+	{
+		"id": 170,
+		"rarity": 1,
+		"name_jp": "ワイドローラー",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,3,2,2],
+			[0,0,2,2,0,0],
+			[0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 172,
+		"rarity": 1,
+		"name_jp": "R-PEN/5H",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,2,0,0,0,0,0],
+			[2,2,2,2,2,3,2],
+			[0,0,2,0,0,0,0]
 		]
 	}
 ]
