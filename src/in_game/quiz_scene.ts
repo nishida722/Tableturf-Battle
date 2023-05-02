@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import AppDefine from "../define/app_define";
 import CardDataManager from '../data/card_data_manager';
 import Card from './card';
+import QuizButton from './quiz_button';
 
 export default class Quiz extends Phaser.Scene
 {
@@ -27,7 +28,7 @@ export default class Quiz extends Phaser.Scene
     {
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
-        this.add.graphics().fillStyle(0x000000, 0.6).fillRect(0, 80, AppDefine.SIZE_WIDTH_SCREEN, 400);
+        this.add.graphics().fillStyle(0x000000, 0.4).fillRect(0, 80, AppDefine.SIZE_WIDTH_SCREEN, 400);
 
         const card_data_list = this.cache.json.get('card_data');
         console.log(card_data_list);
@@ -40,5 +41,9 @@ export default class Quiz extends Phaser.Scene
         card.setSelect(true);
         this.add.existing(card);
         Phaser.Display.Align.In.Center(card, this.zone, 0, -200);
+
+        const button = new QuizButton(this, AppDefine.SIZE_WIDTH_SCREEN * 0.8, 50, card.card_data);
+        this.add.existing(button);
+        Phaser.Display.Align.In.Center(button, this.zone, 0, 300);
     }
 }

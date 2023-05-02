@@ -14,6 +14,8 @@ export default class CardData
     private block_height : number;
     private block_width : number;
 
+    get name() : string { return this.name_jp; }
+
     constructor(data : any)
     {
         this.id = data.id;
