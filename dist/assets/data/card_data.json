@@ -497,7 +497,7 @@
 	{
 		"id": 36,
 		"rarity": 1,
-		"name_jp": "ヒッセン",
+		"name_jp": "スクリュースロッシャー",
 		"name_en": "",
 		"block_num": 7,
 		"sp_block_num": 1,
@@ -511,7 +511,7 @@
 	{
 		"id": 37,
 		"rarity": 1,
-		"name_jp": "ヒッセン",
+		"name_jp": "オーバーフロッシャー",
 		"name_en": "",
 		"block_num": 10,
 		"sp_block_num": 1,

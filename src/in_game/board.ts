@@ -112,6 +112,23 @@ export default class Board extends Phaser.GameObjects.Container
         return blocks;
     }
 
+    private clearBoard = (layer_type : number, fill_block_type) : void =>
+    {
+        const blocks = this.blocks_dict[layer_type];
+
+        for(let row = 0; row < blocks.length; row++)
+        {
+            for(let col = 0; col < blocks[row].length; col++)
+            {
+                const block = blocks[row][col];
+
+                if(block == null) continue;
+
+                block.setBlockType(fill_block_type);
+            }
+        }
+    }
+
     createBlock = (layer_type : number, block_type : number, row : number, col : number) : Block =>
     {
         const is_interactive = (layer_type == Board.LayerType.Background) && this.is_interactive_board;
@@ -178,6 +195,7 @@ export default class Board extends Phaser.GameObjects.Container
         const x_offset = Math.ceil((card_data.getColMax(direction)) * 0.5) - 1;
         const y_offset = Math.ceil((card_data.getRowMax(direction)) * 0.5) - 1;
 
+        this.clearBoard(Board.LayerType.Preview, Block.BlockType.Empty);
         this.setBlocks(Board.LayerType.Main, x - x_offset, y - y_offset, card_data.getBlocks(direction));
     }
 
