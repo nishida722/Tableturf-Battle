@@ -794,6 +794,61 @@
 		]
 	},
 	{
+		"id": 163,
+		"rarity": 1,
+		"name_jp": "もみじシューター",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[2,3,2],
+			[0,0,2]
+		]
+	},
+	{
+		"id": 164,
+		"rarity": 1,
+		"name_jp": "プロモデラーRG",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,3,2],
+			[2,2,2,2],
+			[0,0,2,0]
+		]
+	},
+	{
+		"id": 165,
+		"rarity": 1,
+		"name_jp": "スプラシューターコラボ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,3,2,2],
+			[2,2,2,2],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 166,
+		"rarity": 1,
+		"name_jp": "プライムシューターコラボ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,3,2,0,0,0],
+			[2,2,2,2,2,2],
+			[0,0,0,2,0,0]
+		]
+	},
+	{
 		"id": 167,
 		"rarity": 1,
 		"name_jp": "スペースシューター",
@@ -805,6 +860,35 @@
 			[2,2,2,2,0],
 			[2,2,2,2,3],
 			[0,2,0,0,0]
+		]
+	},
+	{
+		"id": 168,
+		"rarity": 1,
+		"name_jp": "ノヴァブラスターネオ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[3,0,0,0],
+			[0,2,2,2],
+			[0,2,2,0],
+			[0,0,2,0]
+		]
+	},
+	{
+		"id": 169,
+		"rarity": 1,
+		"name_jp": "カーボンローラーデコ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2],
+			[0,3,2,0],
+			[0,2,0,0]
 		]
 	},
 	{
@@ -822,6 +906,22 @@
 		]
 	},
 	{
+		"id": 171,
+		"rarity": 1,
+		"name_jp": "パプロ・ヒュー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,3,0,0,0],
+			[2,2,0,0,0],
+			[0,0,2,0,0],
+			[0,0,0,2,0],
+			[0,0,0,0,2]
+		]
+	},
+	{
 		"id": 172,
 		"rarity": 1,
 		"name_jp": "R-PEN/5H",
@@ -833,6 +933,213 @@
 			[0,2,0,0,0,0,0],
 			[2,2,2,2,2,3,2],
 			[0,0,2,0,0,0,0]
+		]
+	},
+	{
+		"id": 173,
+		"rarity": 1,
+		"name_jp": "バケットスロッシャーデコ",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,0,2],
+			[2,3,0],
+			[2,2,2]
+		]
+	},
+	{
+		"id": 174,
+		"rarity": 1,
+		"name_jp": "スプラスピナーコラボ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[3,2,2,2,2],
+			[0,0,0,2,2]
+		]
+	},
+	{
+		"id": 175,
+		"rarity": 1,
+		"name_jp": "スパッタリー・ヒュー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2],
+			[3,0,2],
+			[2,2,0]
+		]
+	},
+	{
+		"id": 176,
+		"rarity": 1,
+		"name_jp": "ボールドマーカーネオ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,0,3,2],
+			[2,2,2,2],
+			[2,0,2,0]
+		]
+	},
+	{
+		"id": 177,
+		"rarity": 1,
+		"name_jp": "シャープマーカーネオ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[0,2,0,0],
+			[3,2,2,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 178,
+		"rarity": 1,
+		"name_jp": "N-ZAP89",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[2,3,2,2],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 179,
+		"rarity": 1,
+		"name_jp": ".96ガロンデコ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[3,2,2,2,2,2],
+			[0,0,2,2,2,0],
+			[0,0,0,0,0,2]
+		]
+	},
+	{
+		"id": 180,
+		"rarity": 1,
+		"name_jp": "ジェットスイーパーカスタム",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,2,2,3,2],
+			[0,0,0,0,0,2],
+			[0,0,0,2,2,2]
+		]
+	},
+	{
+		"id": 181,
+		"rarity": 1,
+		"name_jp": "クラッシュブラスターネオ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,0],
+			[3,2,2,2],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 182,
+		"rarity": 1,
+		"name_jp": "ラピッドブラスターデコ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,3,2,2],
+			[0,2,2,2],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 183,
+		"rarity": 1,
+		"name_jp": "L3リールガンD",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,3,2],
+			[0,0,2,2],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 184,
+		"rarity": 1,
+		"name_jp": "スプラローラーコラボ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[2,2,3,2,2],
+			[2,2,2,0,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 185,
+		"rarity": 1,
+		"name_jp": "スプラチャージャーコラボ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"blocks": [
+			[2,2,2,2,2,2,2],
+			[0,0,0,0,3,0,0]
+		]
+	},
+	{
+		"id": 186,
+		"rarity": 1,
+		"name_jp": "スプラスコープコラボ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"blocks": [
+			[0,0,0,3,2,0,0],
+			[2,2,2,2,2,2,2],
+			[0,0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 187,
+		"rarity": 1,
+		"name_jp": "ヒッセン・ヒュー",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"blocks": [
+			[0,2],
+			[3,2],
+			[2,2]
 		]
 	}
 ]
