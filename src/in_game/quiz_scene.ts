@@ -64,7 +64,7 @@ export default class Quiz extends Phaser.Scene
 
         this.quiz_count = 0;
         this.quiz_count_max = 15;
-        this.answer_num = 4;
+        this.answer_num = 5;
         this.exclude_list = [];
 
         this.quiz_answer_data_list = [];
@@ -75,7 +75,7 @@ export default class Quiz extends Phaser.Scene
 
         const button_container = this.add.container(0, 0);
         Phaser.Display.Align.In.Center(button_container, this.zone, 0, 50);
-        const button_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 350);
+        const button_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 400);
         button_container.add(button_bg);
 
         this.quiz_message_info = new CmnInfo(this, AppDefine.SIZE_WIDTH_SCREEN * 0.95, 50);
@@ -96,7 +96,7 @@ export default class Quiz extends Phaser.Scene
 
         Phaser.Actions.GridAlign(this.button_list, {
             width: 1,
-            height: 4,
+            height: this.button_list.length,
             cellWidth: button_width,
             cellHeight: button_height + 20,
             x: -button_width * 0.5,
@@ -135,7 +135,7 @@ export default class Quiz extends Phaser.Scene
             ease: 'Cubic.easeOut',
         });
 
-        const card_list = this.card_data_manager.getRandom(this.answer_num, this.exclude_list);
+        const card_list = this.card_data_manager.getQuiz(this.answer_num, this.exclude_list);
 
         if(this.card)
         {
