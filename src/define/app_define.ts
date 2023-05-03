@@ -14,7 +14,7 @@ export default class AppDefine
 
     static readonly QuizTimeLimit = 1000 * 10; // 10秒
 
-    static readonly DefaultFontFamily = "DelaGothicOne-Regular";
+    static readonly DefaultFontFamily = "CustomFont_01";
     
     // ブロックを配置する方向の定数定義
     static readonly Direction = {
