@@ -53,7 +53,7 @@ export default class Card extends Phaser.GameObjects.Container
         block_num.add(block_num_bg);
 
         // ブロック数を表示
-        const block_num_text = new Phaser.GameObjects.Text(this.scene, 0, 0, card_data.block_num.toString(), { color: '#ffffff', fontSize: '28px' ,fontFamily: 'DelaGothicOne-Regular'});
+        const block_num_text = new Phaser.GameObjects.Text(this.scene, 0, 0, card_data.block_num.toString(), { color: '#ffffff', fontSize: '28px' ,fontFamily: AppDefine.DefaultFontFamily});
         block_num_text.setOrigin(0.5);
         block_num.add(block_num_text);
 
