@@ -57,8 +57,25 @@ export default class Title extends Phaser.Scene
         rule_info.setText("ルール説明");
         rule_container.add(rule_info);
 
-        const rule_text = new Phaser.GameObjects.Text(this, 0, 80, `・表示されたナワバトラーのカードを当てるクイズです\n・5つの選択肢から選んで回答します\n・1ゲームは15問です`, { color: '#000000', fontSize: '20px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
+        const rule_text = new Phaser.GameObjects.Text(this, 0, 100, 
+`
+・表示されたナワバトラーカードを当てるクイズです
+・5つの選択肢から選んで回答します
+・15問の問題が出題されます
+・1問につき10秒間の制限時間があります
+・回答は早いほど正解した時のスコアが高くなります
+`
+        , { color: '#000000', fontSize: '20px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
         rule_container.add(rule_text);
+
+        // 免責事項を表すテキスト
+        const rule2_text = new Phaser.GameObjects.Text(this, 0, 230, 
+`
+※当ゲームは非公式のものであり、任天堂株式会社とは一切関係ありません
+　管理者Twitter：@sjm_spla
+`
+        , { color: '#888888', fontSize: '12px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
+        rule_container.add(rule2_text);
 
         // メニュー
 
