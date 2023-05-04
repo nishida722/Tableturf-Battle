@@ -36,6 +36,10 @@ export default class Title extends Phaser.Scene
 
     create = () =>
     {
+        gtag('event', 'game_title', {
+            'event_category': 'game',
+            'event_label': 'game_title'
+        });
 
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
@@ -60,7 +64,7 @@ export default class Title extends Phaser.Scene
         const rule_text = new Phaser.GameObjects.Text(this, 0, 100, 
 `
 ・表示されたナワバトラーカードを当てるクイズです
-・5つの選択肢から選んで回答します
+・5つの選択肢から回答します
 ・15問の問題が出題されます
 ・1問につき10秒間の制限時間があります
 ・回答は早いほど正解した時のスコアが高くなります
