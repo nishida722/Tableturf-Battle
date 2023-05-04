@@ -44,12 +44,30 @@ export default class Title extends Phaser.Scene
 
         this.setupCard();
 
+        // ルール
+
+        const info_width = AppDefine.SIZE_WIDTH_SCREEN * 0.95;
+
+        const rule_container = this.add.container(0, 0);
+        Phaser.Display.Align.In.Center(rule_container, this.zone, 0, -50);
+        const rule_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0xffffff, 0.95).fillRect(-info_width * 0.5, 0, info_width, 250);
+        rule_container.add(rule_bg);
+
+        const rule_info = new CmnInfo(this, info_width, 50);
+        rule_info.setText("ルール説明");
+        rule_container.add(rule_info);
+
+        const rule_text = new Phaser.GameObjects.Text(this, 0, 80, `・表示されたナワバトラーのカードを当てるクイズです\n・5つの選択肢から選んで回答します\n・1ゲームは15問です`, { color: '#000000', fontSize: '20px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
+        rule_container.add(rule_text);
+
+        // メニュー
+
         const menu_container = this.add.container(0, 0);
-        Phaser.Display.Align.In.Center(menu_container, this.zone, 0, 50);
-        const menu_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 300);
+        Phaser.Display.Align.In.Center(menu_container, this.zone, 0, 250);
+        const menu_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0xffffff, 0.95).fillRect(-info_width * 0.5, 0, info_width, 250);
         menu_container.add(menu_bg);
 
-        const menu_info = new CmnInfo(this, AppDefine.SIZE_WIDTH_SCREEN * 0.95, 50);
+        const menu_info = new CmnInfo(this, info_width, 50);
         menu_info.setText("クイズ選択");
         menu_container.add(menu_info);
 
@@ -61,6 +79,13 @@ export default class Title extends Phaser.Scene
         base_main_weapons_button.on_click = this.onSelectMenu;
         menu_container.add(base_main_weapons_button);
         button_list.push(base_main_weapons_button);
+
+        const comming_soon_button = new CmnButton(this, button_width, button_height, 'COMING SOON', { mode : AppDefine.QuizMode.BaseMainWeapons, name : "COMING SOON" });
+        comming_soon_button.on_click = this.onSelectMenu;
+        comming_soon_button.showMask(true);
+        comming_soon_button.setAlpha(0.3);
+        menu_container.add(comming_soon_button);
+        button_list.push(comming_soon_button);
 
         Phaser.Actions.GridAlign(button_list, {
             width: 1,

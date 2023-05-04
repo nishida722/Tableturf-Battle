@@ -9,6 +9,7 @@ export default class CmnButton<T> extends Phaser.GameObjects.Container
 
     button_text : Phaser.GameObjects.Text;
     mask_graphics : Phaser.GameObjects.Graphics;
+    bg_graphics : Phaser.GameObjects.Graphics;
 
     width: number;
     height: number;
@@ -20,17 +21,17 @@ export default class CmnButton<T> extends Phaser.GameObjects.Container
         this.width = width;
         this.height = height;
 
-        const bg_graphics = new Phaser.GameObjects.Graphics(this.scene);
-        this.add(bg_graphics);
-        bg_graphics.fillStyle(0x0000aa, 1);
-        bg_graphics.fillRoundedRect(-this.width * 0.5, -this.height * 0.5, this.width, this.height, 10);
-        bg_graphics.setInteractive(new Phaser.Geom.Rectangle(-this.width * 0.5, -this.height * 0.5, this.width, this.height), Phaser.Geom.Rectangle.Contains);
-        bg_graphics.on('pointerup', () => {
+        this.bg_graphics = new Phaser.GameObjects.Graphics(this.scene);
+        this.add(this.bg_graphics);
+        this.bg_graphics.fillStyle(0x0000aa, 1);
+        this.bg_graphics.fillRoundedRect(-this.width * 0.5, -this.height * 0.5, this.width, this.height, 10);
+
+        this.bg_graphics.on('pointerup', () => {
            if(this.on_click) this.on_click(this.callback_data);
         });
 
         // スプライトがクリックされたときのイベントリスナーを追加
-        bg_graphics.on('pointerdown', () => {
+        this.bg_graphics.on('pointerdown', () => {
             // クリックされたときのアニメーションを実行
             this.scene.tweens.add({
                 targets: this,
@@ -70,5 +71,14 @@ export default class CmnButton<T> extends Phaser.GameObjects.Container
         this.mask_graphics.clear();
         this.mask_graphics.fillStyle(0x000000, (is_show) ? 0.5 : 0);
         this.mask_graphics.fillRoundedRect(-this.width * 0.5, -this.height * 0.5, this.width, this.height, 10);
+
+        if(!is_show)
+        {
+            this.bg_graphics.setInteractive(new Phaser.Geom.Rectangle(-this.width * 0.5, -this.height * 0.5, this.width, this.height), Phaser.Geom.Rectangle.Contains);
+        }
+        else
+        {
+            this.bg_graphics.disableInteractive();
+        }
     }
 }

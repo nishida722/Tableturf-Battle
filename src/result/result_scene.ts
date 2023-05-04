@@ -101,8 +101,8 @@ export default class Result extends Phaser.Scene
 
         this.tweet_button = new CmnButton(this, button_width, button_height, '結果をツイートする');
         this.tweet_button.on_click = () => {
-            const tweet_text = `【ナワバトクイズ : ${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n`;
-            const tweet_url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet_text) + "&hashtags=" + encodeURIComponent("ナワバトクイズ");
+            const tweet_text = `【#ナワバトクイズ : ${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n\nhttps://nb-quiz.bysjm.com/`;
+            const tweet_url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet_text);
             window.open(tweet_url, "_blank");
         };
         this.add.existing(this.tweet_button);
@@ -140,6 +140,7 @@ export default class Result extends Phaser.Scene
         this.correct_num_text.scaleY = 0;
         this.quiz_name_text.scaleY = 0;
         this.score_text.scaleY = 0;
+        this.tweet_button.scaleY = 0;
 
         this.return_title_button.alpha = 0;
 
@@ -199,6 +200,20 @@ export default class Result extends Phaser.Scene
                     // 現在の値を小数点以下切り捨てして表示
                     this.score_text.text = `XP ${Math.floor(currentValue.value).toString().padStart(4, '0')}`;
                 },
+                onComplete: () => {
+                    resolve();
+                }
+            });
+        });
+
+        // 反転されるようなアニメーション
+        await new Promise<void>(resolve => {
+            this.tweens.add({
+                targets: this.tweet_button,
+                scaleY: 1,
+                duration: 100, // 100msでアニメーションを完了させる
+                delay: 500, // 500ms後にアニメーションを開始する
+                ease: 'Cubic.easeOut',
                 onComplete: () => {
                     resolve();
                 }
