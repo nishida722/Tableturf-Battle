@@ -12,7 +12,7 @@ export default class AppDefine
 
     static readonly SceneFadeSec = 1000 * 0.5; // フェードイン/アウトで半分ずつ
 
-    static readonly QuizTimeLimit = 1000 * 10; // 10秒
+    static readonly QuizTimeLimitSec = 1000 * 10; // 10秒
 
     static readonly DefaultFontFamily = "CustomFont_01";
     

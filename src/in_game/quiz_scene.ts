@@ -28,7 +28,16 @@ export default class Quiz extends Phaser.Scene
     quiz_message_info : CmnInfo;
 
     quiz_answer_data_list : QuizAnswerData[];
+
+    quiz_time_limit_sec : number;
+    quiz_time_limit_sec_text : Phaser.GameObjects.Text;
+    quiz_time_limit_milli_sec_text : Phaser.GameObjects.Text;
+    quiz_timer_tween : Phaser.Tweens.Tween;
     
+    ui_list : Phaser.GameObjects.GameObject[];
+
+    scene_data : any;
+
     constructor ()
     {
         super({ key: AppDefine.SceneName.Quiz, active: false });
@@ -52,15 +61,71 @@ export default class Quiz extends Phaser.Scene
         });
     }
 
+    init(data) {
+        this.scene_data = data;
+    }
+
     create = () =>
     {
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
-        this.add.graphics().fillStyle(0x000000, 0.4).fillRect(0, 80, AppDefine.SIZE_WIDTH_SCREEN, 400);
+        this.startEffect();
+    }
 
+    startEffect = async () : Promise<void> =>
+    {
+        // 操作無効
+        this.input.enabled = false;
+
+        const count_text = this.add.text(0, 0, "Ready?", { fontFamily: AppDefine.DefaultFontFamily, fontSize: 100, color: "#0000aa" }).setOrigin(0.5);
+        this.add.existing(count_text);
+        Phaser.Display.Align.In.Center(count_text, this.zone);
+
+        await new Promise<void>(resolve => {
+            this.tweens.add({
+                targets: count_text,
+                scale: 0.75,
+                duration: 1500,
+                delay: 1000,
+                ease: 'Power2',
+                onComplete: () =>
+                {
+                    resolve();
+                }
+            });
+        });
+
+        count_text.setText("Go!");
+        await new Promise<void>(resolve => {
+            this.tweens.add({
+                targets: count_text,
+                scale: 10.0,
+                alpha: 0.0,
+                duration: 500,
+                ease: 'Quadratic',
+                onComplete: () =>
+                {
+                    resolve();
+                }
+            });
+        });
+
+        count_text.destroy();
+    
+        this.setupQuiz();
+
+        // 操作有効
+        this.input.enabled = true;
+    }
+
+    setupQuiz = () =>
+    {
         const card_data_list = this.cache.json.get('card_data');
-        console.log(card_data_list);
         this.card_data_manager = new CardDataManager(card_data_list);
+
+        this.ui_list = [];
+
+        this.ui_list.push(this.add.graphics().fillStyle(0x000000, 0.4).fillRect(0, 80, AppDefine.SIZE_WIDTH_SCREEN, 350));
 
         this.quiz_count = 0;
         this.quiz_count_max = 15;
@@ -72,8 +137,11 @@ export default class Quiz extends Phaser.Scene
         this.quiz_count_info = new CmnInfo(this, 150, 50);
         Phaser.Display.Align.In.Center(this.quiz_count_info, this.zone, 0, -400);
         this.add.existing(this.quiz_count_info);
+        this.ui_list.push(this.quiz_count_info);
 
         const button_container = this.add.container(0, 0);
+        this.ui_list.push(button_container);
+
         Phaser.Display.Align.In.Center(button_container, this.zone, 0, 50);
         const button_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 400);
         button_container.add(button_bg);
@@ -103,6 +171,31 @@ export default class Quiz extends Phaser.Scene
             y: 50,
         });
 
+        const time_container = this.add.container(0, 0);
+        Phaser.Display.Align.In.LeftCenter(time_container, this.zone, 0, 35);
+        this.add.existing(time_container);
+        this.ui_list.push(time_container);
+
+        // 円形を描画
+        const circle = this.add.graphics().fillStyle(0x000000, 1).fillCircle(50, -15, 35);
+        time_container.add(circle);
+
+        // 円形を描画
+        const sub_circle = this.add.graphics().fillStyle(0x000000, 1).fillCircle(90, 0, 20);
+        time_container.add(sub_circle);
+
+        // 円形を描画
+        const mini_circle = this.add.graphics().fillStyle(0x000000, 1).fillCircle(90, -30, 5);
+        time_container.add(mini_circle);
+
+        this.quiz_time_limit_sec_text = new Phaser.GameObjects.Text(this, 50, -15, "10.", { color: '#ffffff', fontSize: '28px' ,fontFamily: AppDefine.DefaultFontFamily});
+        this.quiz_time_limit_sec_text.setOrigin(0.5, 0.5);
+        time_container.add(this.quiz_time_limit_sec_text);
+
+        this.quiz_time_limit_milli_sec_text = new Phaser.GameObjects.Text(this, 85, -5, "00", { color: '#ffffff', fontSize: '12px' ,fontFamily: AppDefine.DefaultFontFamily});
+        this.quiz_time_limit_milli_sec_text.setOrigin(0.5, 0.5);
+        time_container.add(this.quiz_time_limit_milli_sec_text);
+
         this.nextQuiz();
     }
 
@@ -113,13 +206,37 @@ export default class Quiz extends Phaser.Scene
         // 最終問題まで終わったら結果画面へ
         if(this.quiz_count > this.quiz_count_max)
         {
-            this.cameras.main.fadeOut(AppDefine.SceneFadeSec, 0, 0, 0, (camera : Phaser.Cameras.Scene2D.Camera , progress : number) =>
+            this.input.enabled = false;
+
+            this.ui_list.forEach((ui) => 
             {
-                if(progress >= 1)
+                ui.destroy();
+            });
+            if(this.card) this.card.destroy();
+
+            const count_text = this.add.text(0, 0, "Finish!", { fontFamily: AppDefine.DefaultFontFamily, fontSize: 100, color: "#0000aa" }).setOrigin(0.5);
+            this.add.existing(count_text);
+            Phaser.Display.Align.In.Center(count_text, this.zone);
+    
+            this.tweens.add({
+                targets: count_text,
+                scale: 0.75,
+                duration: 1500,
+                ease: 'Power2',
+                onComplete: () =>
                 {
-                    this.scene.start(AppDefine.SceneName.Result, {quiz_answer_data_list : this.quiz_answer_data_list});
+                    this.cameras.main.fadeOut(AppDefine.SceneFadeSec, 0, 0, 0, (camera : Phaser.Cameras.Scene2D.Camera , progress : number) =>
+                    {
+                        if(progress >= 1)
+                        {
+                            this.scene_data.quiz_answer_data_list = this.quiz_answer_data_list;
+
+                            this.scene.start(AppDefine.SceneName.Result, this.scene_data);
+                        }
+                    });
                 }
             });
+
             return;
         }
         
@@ -151,7 +268,7 @@ export default class Quiz extends Phaser.Scene
         this.card.setScale(0, card_scale);
         this.card.setSelect(true);
         this.add.existing(this.card);
-        Phaser.Display.Align.In.Center(this.card, this.zone, 0, -190);
+        Phaser.Display.Align.In.Center(this.card, this.zone, 0, -200);
 
         // カードを反転されるようなアニメーション
         this.tweens.add({
@@ -192,6 +309,35 @@ export default class Quiz extends Phaser.Scene
                 ease: 'Cubic.easeOut',
             });
         }
+
+        // カウントダウン
+        // 現在の値を格納するオブジェクト
+        let current_sec_value = { value: AppDefine.QuizTimeLimitSec };
+
+        // tweenをシーンに追加
+
+        this.quiz_timer_tween = this.tweens.add({
+            targets: current_sec_value,
+            value: 0,
+            duration: AppDefine.QuizTimeLimitSec,
+            onUpdate: () => {
+                this.quiz_time_limit_sec = Math.floor(current_sec_value.value);
+
+                // 5桁になるように0埋め
+                const limit_sec = this.quiz_time_limit_sec.toString().padStart(5, '0')
+                
+                //　limit_secの先頭2桁を秒として表示
+                this.quiz_time_limit_sec_text.text = `${limit_sec.slice(0, 2)}.`;
+
+                // limit_secの下2桁をミリ秒として表示
+                this.quiz_time_limit_milli_sec_text.text = limit_sec.slice(2,4);
+            },
+            onComplete: () => {
+                // タイムアウトの場合自動で不正解とする
+                this.onSelectAnswer(null);
+            }
+        });
+
     }
 
     onSelectAnswer = (card_data : CardData) =>
@@ -199,12 +345,15 @@ export default class Quiz extends Phaser.Scene
         // 操作を無効にする
         this.input.enabled = false;
 
+        this.quiz_timer_tween.stop();
+        console.log(this.quiz_time_limit_sec);
+
         // 除外リストの最後の要素が正解のカードID
         const answer_card_id = this.exclude_list[this.exclude_list.length - 1];
 
-        const result = (answer_card_id == card_data.id) ? QuizAnswerData.Result.Correct : QuizAnswerData.Result.Incorrect;
+        const result = (card_data && answer_card_id == card_data.id) ? QuizAnswerData.Result.Correct : QuizAnswerData.Result.Incorrect;
         console.log((result == QuizAnswerData.Result.Correct) ? "正解" : "不正解");
-        this.quiz_answer_data_list.push(new QuizAnswerData(result, 0));
+        this.quiz_answer_data_list.push(new QuizAnswerData(result, this.quiz_time_limit_sec));
 
         for (let i = 0; i < this.answer_num; i++)
         {

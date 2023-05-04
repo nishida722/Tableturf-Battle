@@ -2,10 +2,15 @@ import * as Phaser from 'phaser';
 import AppDefine from "../define/app_define";
 import CmnButton from '../common/common_button';
 import CmnInfo from '../common/common_info';
+import Card from '../in_game/card';
+import CardDataManager from '../data/card_data_manager';
 
 export default class Title extends Phaser.Scene
 {
     zone : Phaser.GameObjects.Zone;
+
+    card_data_manager : CardDataManager;
+    card : Card;
  
     constructor ()
     {
@@ -16,6 +21,9 @@ export default class Title extends Phaser.Scene
     {
         this.zone = this.add.zone(AppDefine.SIZE_WIDTH_SCREEN * 0.5, AppDefine.SIZE_HEIGHT_SCREEN * 0.5, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN);
         this.load.glsl('Some Squares', './assets/shaders/some_squares.glsl.js');
+
+        // データを読み込む
+        this.load.json('card_data', './assets/data/card_data.json');
 
         this.cameras.main.fadeIn(AppDefine.SceneFadeSec, 0, 0, 0, (camera : Phaser.Cameras.Scene2D.Camera , progress : number) =>
         {
@@ -31,10 +39,14 @@ export default class Title extends Phaser.Scene
 
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
+        const card_data_list = this.cache.json.get('card_data');
+        this.card_data_manager = new CardDataManager(card_data_list);
+
+        this.setupCard();
 
         const menu_container = this.add.container(0, 0);
         Phaser.Display.Align.In.Center(menu_container, this.zone, 0, 50);
-        const menu_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 350);
+        const menu_bg = new Phaser.GameObjects.Graphics(this).fillStyle(0x000000, 0.4).fillRect(-AppDefine.SIZE_WIDTH_SCREEN * 0.5, 0, AppDefine.SIZE_WIDTH_SCREEN, 300);
         menu_container.add(menu_bg);
 
         const menu_info = new CmnInfo(this, AppDefine.SIZE_WIDTH_SCREEN * 0.95, 50);
@@ -43,9 +55,9 @@ export default class Title extends Phaser.Scene
 
         const button_width = AppDefine.SIZE_WIDTH_SCREEN * 0.8;
         const button_height = 50;
-        const button_list : CmnButton<number>[] = [];
+        const button_list : CmnButton<any>[] = [];
 
-        const base_main_weapons_button = new CmnButton(this, button_width, button_height, 'ブキ', AppDefine.QuizMode.BaseMainWeapons);
+        const base_main_weapons_button = new CmnButton(this, button_width, button_height, 'ブキ編', { mode : AppDefine.QuizMode.BaseMainWeapons, name : "ブキ編" });
         base_main_weapons_button.on_click = this.onSelectMenu;
         menu_container.add(base_main_weapons_button);
         button_list.push(base_main_weapons_button);
@@ -60,16 +72,58 @@ export default class Title extends Phaser.Scene
         });
     }
 
-    onSelectMenu = (mode : number) =>
+    onSelectMenu = (button_data : any) =>
     {
-        console.log(mode);
+        console.log(button_data);
         this.input.enabled = false;
         this.cameras.main.fadeOut(AppDefine.SceneFadeSec, 0, 0, 0, (camera : Phaser.Cameras.Scene2D.Camera , progress : number) => 
         {
             if(progress >= 1)
             {
-                this.scene.start(AppDefine.SceneName.Quiz, { mode: mode });
+                this.scene.start(AppDefine.SceneName.Quiz, button_data);
             }
+        });
+    }
+
+    private setupCard = () =>
+    {
+        if(this.card)
+        {
+            this.card.destroy();
+            this.card = null;
+        }
+
+        const card_scale = 1.5;
+        this.card = new Card(this, this.card_data_manager.getRandom(1)[0]);
+        this.card.setScale(0, card_scale);
+        this.card.setSelect(true);
+        this.add.existing(this.card);
+        Phaser.Display.Align.In.Center(this.card, this.zone, 0, -250);
+
+        // カードを反転されるようなアニメーション
+        this.tweens.add({
+            targets: this.card,
+            scaleX: card_scale,
+            scaleY: card_scale,
+            duration: 100, // 100msでアニメーションを完了させる
+            ease: 'Cubic.easeOut',
+        });
+
+        // ふわふわと動くアニメーションを適用
+        this.tweens.add({
+            targets: this.card,
+            y: this.card.y - 10,
+            duration: 2000,
+            ease: 'Sine.easeInOut',
+            yoyo: true, // 往復アニメーションを有効にする
+            repeat: -1 // 無限にリピートする
+        });
+
+        // 3秒後にthis.setupCardを呼び出して別のカードに切り替える
+        this.time.addEvent({
+            delay: 3000,
+            callback: this.setupCard,
+            callbackScope: this,
         });
     }
 }

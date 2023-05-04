@@ -8,12 +8,15 @@ export default class Result extends Phaser.Scene
 {
     zone : Phaser.GameObjects.Zone;
 
+    scene_data : any;
     quiz_answer_data_list : QuizAnswerData[];
     correct_num_text : Phaser.GameObjects.Text;
+    quiz_name_text : Phaser.GameObjects.Text;
     score_text : Phaser.GameObjects.Text;
 
     score : number;
 
+    tweet_button : CmnButton<null>;
     return_title_button : CmnButton<null>;
  
     constructor ()
@@ -36,7 +39,8 @@ export default class Result extends Phaser.Scene
     }
 
     init(data) {
-        this.quiz_answer_data_list = data.quiz_answer_data_list;
+        this.scene_data = data;
+        this.quiz_answer_data_list = this.scene_data.quiz_answer_data_list;
     }
 
     create = () =>
@@ -59,12 +63,29 @@ export default class Result extends Phaser.Scene
         const total_num = (this.quiz_answer_data_list) ? this.quiz_answer_data_list.length : 0;
 
         // スコア計算(全問正解で3000になるようにする)
-        this.score = Math.floor(3000 * correct_num / total_num);
+        const base_score = Math.floor(3000 / total_num);
+        this.score = 0;
+        for(let i = 0; i < this.quiz_answer_data_list.length; i++)
+        {
+            if(this.quiz_answer_data_list[i].result == QuizAnswerData.Result.Correct)
+            {
+                const time_rate = (this.quiz_answer_data_list[i].remaining_time / AppDefine.QuizTimeLimitSec) + 0.334;
+                this.score += base_score * time_rate;
+            }
+        }
+
+        // 正解率による補正
+        this.score = Math.floor(this.score);
         
         this.correct_num_text = new Phaser.GameObjects.Text(this, 0, 0, `正解数 : ${correct_num} / ${total_num}`, {fontFamily: AppDefine.DefaultFontFamily, fontSize: 30, color: "#ffffff"}).setOrigin(0, 0.5);
         this.correct_num_text.x = -AppDefine.SIZE_WIDTH_SCREEN * 0.5 + 20;
         this.correct_num_text.y = 50;
         result_container.add(this.correct_num_text);
+
+        this.quiz_name_text = new Phaser.GameObjects.Text(this, 0, 0, this.scene_data.name, {fontFamily: AppDefine.DefaultFontFamily, fontSize: 30, color: "#ffffff"}).setOrigin(0.5, 0.5);
+        this.quiz_name_text.x = 0;
+        this.quiz_name_text.y = 120;
+        result_container.add(this.quiz_name_text);
 
         this.score_text = new Phaser.GameObjects.Text(this, 0, 0, `XP 0000`, {fontFamily: AppDefine.DefaultFontFamily, fontSize: 90, color: "#ffffff"}).setOrigin(0.5, 0.5);
         this.score_text.x = 0;
@@ -77,6 +98,15 @@ export default class Result extends Phaser.Scene
 
         const button_width = AppDefine.SIZE_WIDTH_SCREEN * 0.8;
         const button_height = 50;
+
+        this.tweet_button = new CmnButton(this, button_width, button_height, '結果をツイートする');
+        this.tweet_button.on_click = () => {
+            const tweet_text = `【ナワバトクイズ : ${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n`;
+            const tweet_url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet_text) + "&hashtags=" + encodeURIComponent("ナワバトクイズ");
+            window.open(tweet_url, "_blank");
+        };
+        this.add.existing(this.tweet_button);
+        Phaser.Display.Align.In.Center(this.tweet_button, this.zone, 0, 0);
 
         this.return_title_button = new CmnButton(this, button_width, button_height, 'タイトルへ');
         this.return_title_button.on_click = () => {
@@ -108,6 +138,7 @@ export default class Result extends Phaser.Scene
         this.input.enabled = false;
 
         this.correct_num_text.scaleY = 0;
+        this.quiz_name_text.scaleY = 0;
         this.score_text.scaleY = 0;
 
         this.return_title_button.alpha = 0;
@@ -119,6 +150,20 @@ export default class Result extends Phaser.Scene
                 scaleY: 1,
                 duration: 100, // 100msでアニメーションを完了させる
                 delay: 2000, // 2秒後にアニメーションを開始する
+                ease: 'Cubic.easeOut',
+                onComplete: () => {
+                    resolve();
+                }
+            });
+        });
+
+        // 反転されるようなアニメーション
+        await new Promise<void>(resolve => {
+            this.tweens.add({
+                targets: this.quiz_name_text,
+                scaleY: 1,
+                duration: 100, // 100msでアニメーションを完了させる
+                delay: 500, // 500ms後にアニメーションを開始する
                 ease: 'Cubic.easeOut',
                 onComplete: () => {
                     resolve();
@@ -151,10 +196,8 @@ export default class Result extends Phaser.Scene
                 duration: 1000,
                 delay: 500, // 500ms後にアニメーションを開始する
                 onUpdate: () => {
-                    // 現在の値を四捨五入して表示
-                    this.score_text.text = `XP ${Math.round(currentValue.value).toString().padStart(4, '0')}`;
-
-
+                    // 現在の値を小数点以下切り捨てして表示
+                    this.score_text.text = `XP ${Math.floor(currentValue.value).toString().padStart(4, '0')}`;
                 },
                 onComplete: () => {
                     resolve();
