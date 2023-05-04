@@ -67,6 +67,12 @@ export default class Quiz extends Phaser.Scene
 
     create = () =>
     {
+
+        gtag('event', 'game_play', {
+            'event_category': 'game',
+            'event_label': 'game_play'
+        });
+
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
         this.startEffect();

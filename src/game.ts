@@ -18,3 +18,8 @@ const config = {
 };
 
 const game = new Phaser.Game(config);
+
+gtag('event', 'game_start', {
+    'event_category': 'game',
+    'event_label': 'game_start'
+});

@@ -45,7 +45,6 @@ export default class Result extends Phaser.Scene
 
     create = () =>
     {
-
         this.add.shader('Some Squares', 0, 0, AppDefine.SIZE_WIDTH_SCREEN, AppDefine.SIZE_HEIGHT_SCREEN).setOrigin(0);
 
         const result_container = this.add.container(0, 0);
@@ -74,7 +73,6 @@ export default class Result extends Phaser.Scene
             }
         }
 
-        // 正解率による補正
         this.score = Math.floor(this.score);
         
         this.correct_num_text = new Phaser.GameObjects.Text(this, 0, 0, `正解数 : ${correct_num} / ${total_num}`, {fontFamily: AppDefine.DefaultFontFamily, fontSize: 30, color: "#ffffff"}).setOrigin(0, 0.5);
@@ -101,6 +99,13 @@ export default class Result extends Phaser.Scene
 
         this.tweet_button = new CmnButton(this, button_width, button_height, '結果をツイートする');
         this.tweet_button.on_click = () => {
+
+            gtag('event', 'game_result_tweet', {
+                'event_category': 'game',
+                'event_label': 'game_result_tweet',
+                value: this.score
+            });
+
             const tweet_text = `【#ナワバトクイズ : ${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n\nhttps://nb-quiz.bysjm.com/`;
             const tweet_url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet_text);
             window.open(tweet_url, "_blank");
@@ -131,6 +136,12 @@ export default class Result extends Phaser.Scene
         });
 
         this.playResultEffect();
+
+        gtag('event', 'game_result', {
+            'event_category': 'game',
+            'event_label': 'game_result',
+            value: this.score
+        });
     }
 
     playResultEffect = async () : Promise<void> =>
