@@ -106,7 +106,7 @@ export default class Result extends Phaser.Scene
                 value: this.score
             });
 
-            const tweet_text = `【#ナワバトクイズ : ${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n\nhttps://nb-quiz.bysjm.com/`;
+            const tweet_text = `【#ナワバトクイズ : #NBQ_${this.scene_data.name}】\nXP ${this.score} 達成！(正解数 : ${correct_num} / ${total_num})\n\nhttps://nb-quiz.bysjm.com/`;
             const tweet_url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweet_text);
             window.open(tweet_url, "_blank");
         };
