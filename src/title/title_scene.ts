@@ -48,6 +48,11 @@ export default class Title extends Phaser.Scene
 
         this.setupCard();
 
+        // 免責事項を表すテキスト
+        const ver_text = new Phaser.GameObjects.Text(this, 0, 230, `ver1.0.1`, { color: '#0000ff', fontSize: '12px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
+        this.add.existing(ver_text);
+        Phaser.Display.Align.In.TopRight(ver_text, this.zone, 0, 0);
+
         // ルール
 
         const info_width = AppDefine.SIZE_WIDTH_SCREEN * 0.95;
@@ -96,17 +101,17 @@ export default class Title extends Phaser.Scene
         const button_height = 50;
         const button_list : CmnButton<any>[] = [];
 
-        const base_main_weapons_button = new CmnButton(this, button_width, button_height, 'ブキ編', {card_category : AppDefine.CardCategory.MainWeapon, mode : AppDefine.QuizMode.BaseMainWeapons, name : "ブキ編" });
-        base_main_weapons_button.on_click = this.onSelectMenu;
-        menu_container.add(base_main_weapons_button);
-        button_list.push(base_main_weapons_button);
+        const main_weapons_name = `ブキ編`
+        const main_weapons_button = new CmnButton(this, button_width, button_height, main_weapons_name, {card_category : AppDefine.CardCategory.MainWeapon, name : main_weapons_name });
+        main_weapons_button.on_click = this.onSelectMenu;
+        menu_container.add(main_weapons_button);
+        button_list.push(main_weapons_button);
 
-        const comming_soon_button = new CmnButton(this, button_width, button_height, 'COMING SOON', { mode : AppDefine.QuizMode.BaseMainWeapons, name : "COMING SOON" });
-        comming_soon_button.on_click = this.onSelectMenu;
-        comming_soon_button.showMask(true);
-        comming_soon_button.setAlpha(0.3);
-        menu_container.add(comming_soon_button);
-        button_list.push(comming_soon_button);
+        const call_card_name = `全${card_data_list.length}種編`
+        const all_card_button = new CmnButton(this, button_width, button_height, call_card_name, {card_category : AppDefine.CardCategory.All, name : call_card_name });
+        all_card_button.on_click = this.onSelectMenu;
+        menu_container.add(all_card_button);
+        button_list.push(all_card_button);
 
         Phaser.Actions.GridAlign(button_list, {
             width: 1,

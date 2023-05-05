@@ -24,11 +24,6 @@ export default class AppDefine
         Left : 3,
     };
 
-    // クイズモードの定数定義
-    static readonly QuizMode = {
-        BaseMainWeapons : 1,
-    }
-
     // シーン名の定数定義
     static readonly SceneName = {
         Title : "Title",
