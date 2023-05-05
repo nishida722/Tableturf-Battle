@@ -7,6 +7,7 @@
 		"block_num": 12,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 33,
 		"blocks": [
 			[2,2,2,2,2],
 			[2,2,2,3,2],
@@ -22,6 +23,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,3,0,2],
 			[2,2,2,2],
@@ -36,6 +38,7 @@
 		"block_num": 4,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[2,3,2],
 			[2,0,0]
@@ -49,6 +52,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,2,0],
 			[2,2,2,3],
@@ -63,6 +67,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,3,0,0],
 			[2,2,2,2],
@@ -77,6 +82,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,3,0],
 			[2,2,2,2],
@@ -91,6 +97,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,3],
 			[0,2,2,0],
@@ -105,6 +112,7 @@
 		"block_num": 5,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2],
 			[2,0,0,0]
@@ -118,6 +126,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,0,2,3,0],
 			[2,2,2,2,2,2],
@@ -132,6 +141,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,3],
 			[0,2,2,2,0,0],
@@ -146,6 +156,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,3,2,2,2,2],
 			[2,0,0,0,0,0],
@@ -160,6 +171,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,0,3],
 			[2,2,2,0],
@@ -175,6 +187,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,0,0,2,3],
 			[0,2,2,2,2],
@@ -189,6 +202,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,0,0,0,2,3],
 			[0,2,2,2,2,2],
@@ -203,6 +217,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,2,2,2],
 			[2,2,2,3],
@@ -217,6 +232,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2],
 			[2,2,2,0],
@@ -231,6 +247,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2],
 			[2,2,3,0,0],
@@ -245,6 +262,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,3,2,2],
 			[2,2,0,0],
@@ -259,6 +277,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,3,2],
 			[2,2,0,0,0],
@@ -273,6 +292,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,0,3],
 			[0,0,2,0],
@@ -289,6 +309,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2],
 			[0,2,3,0],
@@ -303,6 +324,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2,2],
 			[0,0,2,2,2],
@@ -317,6 +339,7 @@
 		"block_num": 13,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2,2],
 			[0,0,0,3,2,2,2],
@@ -332,6 +355,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2,2],
 			[0,0,2,2,0],
@@ -347,6 +371,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,0,3,2],
 			[0,0,0,2,2],
@@ -363,6 +388,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,0,0,2,0],
 			[0,0,0,3,2,2],
@@ -380,6 +406,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2],
 			[2,3,0,0,0,0]
@@ -393,6 +420,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2,2],
 			[0,0,3,0,0,0,0]
@@ -406,6 +434,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,2,3,0,0,0],
 			[2,2,2,2,2,2,2],
@@ -420,6 +449,7 @@
 		"block_num": 11,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2,2],
 			[2,2,2,0,0,3,0]
@@ -433,6 +463,7 @@
 		"block_num": 13,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 1,
 		"blocks": [
 			[0,0,0,2,3,0,0],
 			[2,2,2,2,2,2,2],
@@ -447,6 +478,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,0,0,0,2],
 			[2,3,2,2,2]
@@ -460,6 +492,7 @@
 		"block_num": 11,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2],
 			[2,2,3,0,2,0],
@@ -474,6 +507,7 @@
 		"block_num": 6,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,0,0],
 			[0,3,2],
@@ -488,6 +522,7 @@
 		"block_num": 5,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[2,0],
 			[2,3],
@@ -502,6 +537,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,3,2],
 			[0,2,2],
@@ -516,6 +552,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,0,0,0,0],
 			[3,2,2,2,2],
@@ -530,6 +567,7 @@
 		"block_num": 11,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,0,0,2,0],
 			[2,2,2,2,0],
@@ -544,6 +582,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,3],
 			[2,2,0,0,0]
@@ -557,6 +596,7 @@
 		"block_num": 12,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 1,
 		"blocks": [
 			[2,2,0,0,0],
 			[2,2,0,0,0],
@@ -574,6 +614,7 @@
 		"block_num": 13,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 1,
 		"blocks": [
 			[2,2,0,0,0,0],
 			[2,2,0,0,0,0],
@@ -589,6 +630,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,2,0,0,0],
 			[2,2,2,2,0],
@@ -603,6 +645,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,0,0,0],
 			[2,2,0,0,0],
@@ -617,6 +660,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2],
 			[2,0,3],
@@ -631,6 +675,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,2,2,2,2],
 			[0,2,3,0,0],
@@ -645,6 +690,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,2,0],
 			[2,2,2,3],
@@ -660,6 +706,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,0,0,0],
 			[2,2,2,2,2],
@@ -675,6 +722,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,2,3,2],
 			[2,0,2,2],
@@ -689,6 +737,7 @@
 		"block_num": 11,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,2,0,0],
 			[0,0,2,2,0],
@@ -705,6 +754,7 @@
 		"block_num": 12,
 		"sp_block_num": 1,
 		"sp_point": 5,
+		"category": 1,
 		"blocks": [
 			[0,2,2,0],
 			[0,0,2,2],
@@ -721,6 +771,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,2,0,0],
 			[0,0,2,0],
@@ -737,6 +788,7 @@
 		"block_num": 11,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,3,2,2,2],
 			[2,0,2,0,0],
@@ -753,6 +805,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,0,2,2],
 			[0,3,2,0],
@@ -768,6 +821,7 @@
 		"block_num": 6,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[3],
 			[2],
@@ -785,12 +839,1740 @@
 		"block_num": 5,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[3],
 			[2],
 			[2],
 			[2],
 			[2]
+		]
+	},
+	{
+		"id": 56,
+		"rarity": 1,
+		"name_jp": "スプラッシュボム",
+		"name_en": "",
+		"block_num": 3,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 2,
+		"blocks": [
+			[0,3],
+			[2,2]
+		]
+	},
+	{
+		"id": 57,
+		"rarity": 1,
+		"name_jp": "キューバンボム",
+		"name_en": "",
+		"block_num": 3,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 2,
+		"blocks": [
+			[2],
+			[2],
+			[3]
+		]
+	},
+	{
+		"id": 58,
+		"rarity": 1,
+		"name_jp": "クイックボム",
+		"name_en": "",
+		"block_num": 1,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 2,
+		"blocks": [
+			[3]
+		]
+	},
+	{
+		"id": 59,
+		"rarity": 1,
+		"name_jp": "スプリンクラー",
+		"name_en": "",
+		"block_num": 3,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 2,
+		"blocks": [
+			[2,0,2],
+			[0,3,0]
+		]
+	},
+	{
+		"id": 60,
+		"rarity": 1,
+		"name_jp": "スプラッシュシールド",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[2,2,2],
+			[0,3,0],
+			[0,2,0]
+		]
+	},
+	{
+		"id": 61,
+		"rarity": 1,
+		"name_jp": "タンサンボム",
+		"name_en": "",
+		"block_num": 3,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 2,
+		"blocks": [
+			[2],
+			[3],
+			[2]
+		]
+	},
+	{
+		"id": 62,
+		"rarity": 1,
+		"name_jp": "カーリングボム",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[0,3,0],
+			[2,2,2]
+		]
+	},
+	{
+		"id": 63,
+		"rarity": 1,
+		"name_jp": "ロボットボム",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 2,
+		"blocks": [
+			[0,2,3],
+			[2,2,2],
+			[0,2,0]
+		]
+	},
+	{
+		"id": 64,
+		"rarity": 1,
+		"name_jp": "ジャンプビーコン",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 2,
+		"blocks": [
+			[2,2,2],
+			[2,3,2],
+			[0,2,0],
+			[2,0,2]
+		]
+	},
+	{
+		"id": 65,
+		"rarity": 1,
+		"name_jp": "ポイントセンサー",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[2,0,2],
+			[0,3,0],
+			[2,0,2]
+		]
+	},
+	{
+		"id": 66,
+		"rarity": 1,
+		"name_jp": "トラップ",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[0,2,0],
+			[2,0,2],
+			[0,3,0]
+		]
+	},
+	{
+		"id": 67,
+		"rarity": 1,
+		"name_jp": "ポイズンミズト",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[2,0,0],
+			[0,3,2],
+			[0,2,2]
+		]
+	},
+	{
+		"id": 68,
+		"rarity": 1,
+		"name_jp": "ラインマーカー",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[0,0,3],
+			[0,2,0],
+			[2,0,0],
+			[0,2,0],
+			[0,0,2]
+		]
+	},
+	{
+		"id": 69,
+		"rarity": 1,
+		"name_jp": "トーピード",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 2,
+		"blocks": [
+			[0,2,0],
+			[0,2,2],
+			[3,0,0]
+		]
+	},
+	{
+		"id": 70,
+		"rarity": 2,
+		"name_jp": "ウルトラショット",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,0,0,2,2],
+			[0,0,2,0,2,2],
+			[0,2,0,2,0,0],
+			[2,0,2,0,0,0],
+			[0,2,2,0,0,0],
+			[0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 71,
+		"rarity": 2,
+		"name_jp": "グレートバリア",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,2,2,0,0],
+			[0,2,0,0,2,0],
+			[2,0,0,0,0,2],
+			[2,0,0,0,0,2],
+			[0,2,0,0,2,0],
+			[0,0,2,2,0,0]
+		]
+	},
+	{
+		"id": 72,
+		"rarity": 2,
+		"name_jp": "ショクワンダー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,0,0,0,2],
+			[0,0,0,0,2,0],
+			[2,2,0,2,0,0],
+			[2,2,2,0,0,0],
+			[0,2,2,2,0,0],
+			[0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 73,
+		"rarity": 2,
+		"name_jp": "マルチミサイル",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,2,0,0,2,2],
+			[2,2,2,2,2,2],
+			[0,2,0,0,2,0]
+		]
+	},
+	{
+		"id": 74,
+		"rarity": 2,
+		"name_jp": "アメフラシ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,0,2,0,0],
+			[0,2,2,2,2],
+			[0,2,2,2,2],
+			[2,0,2,0,0]
+		]
+	},
+	{
+		"id": 75,
+		"rarity": 2,
+		"name_jp": "ナイスダマ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,2,2,0],
+			[2,2,2,2],
+			[2,2,2,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 76,
+		"rarity": 2,
+		"name_jp": "ホップソナー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,0,2,0,2],
+			[0,2,0,2,0],
+			[2,0,0,0,2],
+			[0,2,0,2,0],
+			[2,0,2,0,2]
+		]
+	},
+	{
+		"id": 77,
+		"rarity": 2,
+		"name_jp": "キューインキ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,2,0,0,0,2],
+			[2,2,2,0,0,2],
+			[0,2,2,0,0,2],
+			[0,0,0,2,2,0]
+		]
+	},
+	{
+		"id": 78,
+		"rarity": 2,
+		"name_jp": "メガホンレーザー5.1ch",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,2,0,0],
+			[2,0,2,0,2],
+			[0,2,0,2,0],
+			[0,2,0,2,0],
+			[2,0,2,0,2],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 79,
+		"rarity": 2,
+		"name_jp": "ジェットパック",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,2,2,2,2,2],
+			[2,0,2,2,0,2],
+			[0,0,2,2,0,0]
+		]
+	},
+	{
+		"id": 80,
+		"rarity": 2,
+		"name_jp": "ウルトラハンコ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,0,2,2,0],
+			[2,2,2,2,2,2],
+			[0,0,2,2,2,2]
+		]
+	},
+	{
+		"id": 81,
+		"rarity": 2,
+		"name_jp": "カニタンク",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,2,0,0,2,0],
+			[0,0,2,2,0,0],
+			[0,2,0,0,2,0],
+			[2,0,0,0,0,2],
+			[2,2,0,0,2,2]
+		]
+	},
+	{
+		"id": 82,
+		"rarity": 2,
+		"name_jp": "サメライド",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,2,0,0,0],
+			[0,2,2,2,0,2],
+			[2,2,2,2,2,2],
+			[0,0,2,0,0,0]
+		]
+	},
+	{
+		"id": 83,
+		"rarity": 2,
+		"name_jp": "トリプルトルネード",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,0,2,2,0,0],
+			[0,0,2,2,0,0],
+			[2,2,0,0,2,2],
+			[2,2,0,0,2,2]
+		]
+	},
+	{
+		"id": 84,
+		"rarity": 2,
+		"name_jp": "エナジースタンド",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[0,2,2,2,0],
+			[0,2,0,2,0],
+			[2,0,2,0,2],
+			[0,2,2,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 85,
+		"rarity": 2,
+		"name_jp": "ブキチ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,2,2,0],
+			[2,2,2,2,2],
+			[2,0,2,0,2],
+			[0,3,0,2,0]
+		]
+	},
+	{
+		"id": 86,
+		"rarity": 2,
+		"name_jp": "オームラ",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,2,3,0],
+			[2,0,2,0,2],
+			[2,2,2,2,2],
+			[2,0,2,0,0],
+			[0,2,2,0,0]
+		]
+	},
+	{
+		"id": 87,
+		"rarity": 2,
+		"name_jp": "ハナガサ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,2,2,2,0],
+			[2,0,3,0,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 88,
+		"rarity": 2,
+		"name_jp": "ヤシガニさん",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,2,2,2,0],
+			[2,2,2,2,2],
+			[3,0,2,0,2]
+		]
+	},
+	{
+		"id": 89,
+		"rarity": 2,
+		"name_jp": "パル子",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,2,2,0,0],
+			[0,2,2,2,2,0],
+			[0,0,2,3,0,0],
+			[0,2,0,0,2,0],
+			[0,2,0,0,2,0],
+			[2,0,0,0,0,2]
+		]
+	},
+	{
+		"id": 90,
+		"rarity": 2,
+		"name_jp": "スパイキー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,0,2,0],
+			[2,0,2,0,2],
+			[0,2,0,2,0],
+			[2,0,3,0,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 91,
+		"rarity": 2,
+		"name_jp": "クマサン",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,3,0,0,0],
+			[2,0,2,0,0],
+			[2,2,2,0,0],
+			[2,2,2,2,2],
+			[0,0,2,0,2]
+		]
+	},
+	{
+		"id": 92,
+		"rarity": 2,
+		"name_jp": "マザー",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[2,0,2,0,2],
+			[2,2,3,2,2],
+			[0,2,2,2,0]
+		]
+	},
+	{
+		"id": 93,
+		"rarity": 3,
+		"name_jp": "コジャケ",
+		"name_en": "",
+		"block_num": 3,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 104,
+		"blocks": [
+			[3,0],
+			[2,2]
+		]
+	},
+	{
+		"id": 94,
+		"rarity": 3,
+		"name_jp": "アタリメ",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,2,2,2,0],
+			[2,0,3,0,2]
+		]
+	},
+	{
+		"id": 95,
+		"rarity": 3,
+		"name_jp": "司令",
+		"name_en": "",
+		"block_num": 16,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 40,
+		"blocks": [
+			[0,2,2,2,0,0,0],
+			[0,2,2,2,2,0,0],
+			[2,2,3,2,0,2,0],
+			[0,0,2,0,0,0,2],
+			[0,0,0,2,0,0,0],
+			[0,0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 96,
+		"rarity": 3,
+		"name_jp": "アオリ",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[2,2,0,0,0],
+			[2,2,2,2,0],
+			[0,2,2,3,0],
+			[0,0,2,0,2],
+			[2,0,2,0,0],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 97,
+		"rarity": 3,
+		"name_jp": "ホタル",
+		"name_en": "",
+		"block_num": 15,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,0,2,2],
+			[0,2,2,2,2],
+			[0,3,2,2,0],
+			[2,0,2,0,0],
+			[0,0,2,0,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 98,
+		"rarity": 3,
+		"name_jp": "フウカ",
+		"name_en": "",
+		"block_num": 17,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[3,0,2,0,2],
+			[2,2,0,2,2],
+			[0,2,2,2,0],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 99,
+		"rarity": 3,
+		"name_jp": "ウツホ",
+		"name_en": "",
+		"block_num": 17,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 40,
+		"blocks": [
+			[0,2,0,2,0],
+			[0,2,2,2,0],
+			[2,0,2,0,3],
+			[2,2,0,2,2],
+			[0,2,0,2,0],
+			[0,2,0,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 100,
+		"rarity": 3,
+		"name_jp": "マンタロー",
+		"name_en": "",
+		"block_num": 17,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 40,
+		"blocks": [
+			[0,2,0,0,2,0],
+			[2,0,2,2,2,0],
+			[0,2,2,2,0,0],
+			[0,2,2,2,0,2],
+			[2,2,0,0,3,0],
+			[0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 101,
+		"rarity": 3,
+		"name_jp": "ジャッジくん",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,0,2,0],
+			[2,2,2,2,2],
+			[2,0,2,0,2],
+			[2,2,0,3,2]
+		]
+	},
+	{
+		"id": 102,
+		"rarity": 3,
+		"name_jp": "コジャッジくん",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 8,
+		"blocks": [
+			[2,0,2],
+			[2,2,2],
+			[2,2,3]
+		]
+	},
+	{
+		"id": 103,
+		"rarity": 2,
+		"name_jp": "バトロイカ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,0,2,0,0],
+			[2,2,2,2,2],
+			[0,0,2,3,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 104,
+		"rarity": 2,
+		"name_jp": "アイロニック",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,2,2,2,2],
+			[0,0,2,2,2],
+			[0,2,0,2,2],
+			[2,0,3,0,2],
+			[0,2,0,0,0]
+		]
+	},
+	{
+		"id": 105,
+		"rarity": 2,
+		"name_jp": "クラーゲス",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,0,3,2,0,0],
+			[0,2,2,2,2,2],
+			[2,2,2,2,2,0],
+			[0,0,2,2,0,0]
+		]
+	},
+	{
+		"id": 106,
+		"rarity": 2,
+		"name_jp": "ロッケンベルグ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[2,0,2],
+			[2,3,0],
+			[2,0,2],
+			[2,2,2]
+		]
+	},
+	{
+		"id": 107,
+		"rarity": 2,
+		"name_jp": "エゾッコ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,0,2,0,0],
+			[2,2,3,2,2],
+			[2,2,2,2,2],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 108,
+		"rarity": 2,
+		"name_jp": "フォーリマ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,2,2,2],
+			[2,2,2,0],
+			[3,2,0,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 109,
+		"rarity": 2,
+		"name_jp": "ホッコリー",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,0,3,0],
+			[0,0,0,2],
+			[0,2,2,2],
+			[2,2,2,2]
+		]
+	},
+	{
+		"id": 110,
+		"rarity": 2,
+		"name_jp": "ホタックス",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,3,0,2,0],
+			[2,2,2,2,2],
+			[2,2,2,2,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 111,
+		"rarity": 2,
+		"name_jp": "ジモン",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[2,2,3,2,0,2],
+			[2,2,0,2,2,2]
+		]
+	},
+	{
+		"id": 112,
+		"rarity": 2,
+		"name_jp": "シグレニ",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[2,2,3,2,2],
+			[2,2,0,2,2],
+			[2,0,0,0,2]
+		]
+	},
+	{
+		"id": 113,
+		"rarity": 2,
+		"name_jp": "アロメ",
+		"name_en": "",
+		"block_num": 2,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 16,
+		"blocks": [
+			[0,3],
+			[2,0]
+		]
+	},
+	{
+		"id": 114,
+		"rarity": 2,
+		"name_jp": "ヤコ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[2,2,3,0,2,0],
+			[0,2,2,2,2,2],
+			[2,2,2,0,2,0]
+		]
+	},
+	{
+		"id": 115,
+		"rarity": 2,
+		"name_jp": "アナアキ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,2,2,2,0],
+			[0,2,3,2,0],
+			[2,0,0,0,2]
+		]
+	},
+	{
+		"id": 116,
+		"rarity": 2,
+		"name_jp": "エンペリー",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 16,
+		"blocks": [
+			[0,0,0,2,0],
+			[2,0,3,2,2],
+			[0,2,2,2,0],
+			[2,2,2,2,2]
+		]
+	},
+	{
+		"id": 117,
+		"rarity": 2,
+		"name_jp": "タタキケンサキ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 16,
+		"blocks": [
+			[2,0,0],
+			[2,2,2],
+			[2,0,0],
+			[2,3,2]
+		]
+	},
+	{
+		"id": 118,
+		"rarity": 2,
+		"name_jp": "バラズシ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,0,0,2],
+			[0,0,2,2],
+			[0,2,0,3],
+			[2,2,2,2]
+		]
+	},
+	{
+		"id": 119,
+		"rarity": 2,
+		"name_jp": "シチリン",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,2,0,2,0],
+			[2,0,0,0,2],
+			[0,2,0,2,0],
+			[0,0,3,0,0],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 120,
+		"rarity": 1,
+		"name_jp": "タコトルーパー",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 40,
+		"blocks": [
+			[0,2,0],
+			[0,3,2],
+			[2,2,2],
+			[0,2,2]
+		]
+	},
+	{
+		"id": 121,
+		"rarity": 1,
+		"name_jp": "タテタコトルーパー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0],
+			[2,0,3,2],
+			[2,2,2,2],
+			[2,0,2,2]
+		]
+	},
+	{
+		"id": 122,
+		"rarity": 1,
+		"name_jp": "バイタコトルーパー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[2,2,2,0,2],
+			[0,0,3,2,0],
+			[0,2,2,2,0],
+			[0,0,2,2,0]
+		]
+	},
+	{
+		"id": 123,
+		"rarity": 1,
+		"name_jp": "タコホッパー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,2,0],
+			[0,3,2],
+			[2,2,2],
+			[0,2,2],
+			[0,2,0],
+			[0,2,0]
+		]
+	},
+	{
+		"id": 124,
+		"rarity": 1,
+		"name_jp": "タコプター",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 40,
+		"blocks": [
+			[2,0,2],
+			[0,3,0],
+			[0,2,0]
+		]
+	},
+	{
+		"id": 125,
+		"rarity": 1,
+		"name_jp": "ボムコプター",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0,0,0],
+			[0,2,2,2,0,0],
+			[2,2,2,2,2,0],
+			[0,2,2,2,0,3]
+		]
+	},
+	{
+		"id": 126,
+		"rarity": 1,
+		"name_jp": "タコミラーボール",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0,0],
+			[2,2,2,2,2],
+			[2,0,0,0,2],
+			[3,0,0,0,2],
+			[2,0,0,0,2]
+		]
+	},
+	{
+		"id": 127,
+		"rarity": 1,
+		"name_jp": "タコポッド",
+		"name_en": "",
+		"block_num": 2,
+		"sp_block_num": 1,
+		"sp_point": 1,
+		"category": 40,
+		"blocks": [
+			[3,2]
+		]
+	},
+	{
+		"id": 128,
+		"rarity": 2,
+		"name_jp": "大容量タコポッド",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[2,2,2,2],
+			[2,2,2,2],
+			[0,3,0,0],
+			[2,0,2,0]
+		]
+	},
+	{
+		"id": 129,
+		"rarity": 1,
+		"name_jp": "スタコラー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 40,
+		"blocks": [
+			[0,0,0,2],
+			[0,0,2,2],
+			[2,3,0,0],
+			[2,2,0,0]
+		]
+	},
+	{
+		"id": 130,
+		"rarity": 2,
+		"name_jp": "タコスナイパー",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,0,2,2],
+			[0,0,2,0],
+			[0,0,2,3],
+			[2,2,2,2],
+			[0,0,2,0]
+		]
+	},
+	{
+		"id": 131,
+		"rarity": 2,
+		"name_jp": "タココマンダー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,2,2,0],
+			[0,0,2,0,0],
+			[0,0,2,3,0],
+			[2,2,2,2,2],
+			[0,0,2,0,2]
+		]
+	},
+	{
+		"id": 132,
+		"rarity": 1,
+		"name_jp": "タコミサイル",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 40,
+		"blocks": [
+			[0,2,0,0],
+			[3,2,2,2]
+		]
+	},
+	{
+		"id": 133,
+		"rarity": 2,
+		"name_jp": "タコッペリン号",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,2,0,0],
+			[3,2,2,2],
+			[2,2,2,2]
+		]
+	},
+	{
+		"id": 134,
+		"rarity": 1,
+		"name_jp": "インクリーナー",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 40,
+		"blocks": [
+			[2,2,2],
+			[2,2,2],
+			[0,3,0],
+			[2,0,0]
+		]
+	},
+	{
+		"id": 135,
+		"rarity": 1,
+		"name_jp": "タコスタンプ",
+		"name_en": "",
+		"block_num": 4,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 40,
+		"blocks": [
+			[2,2],
+			[3,2]
+		]
+	},
+	{
+		"id": 136,
+		"rarity": 2,
+		"name_jp": "ビートタコスタンプ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,0,2,0],
+			[2,0,3,0,2],
+			[0,2,0,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 137,
+		"rarity": 1,
+		"name_jp": "タコドーザー",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[2,3,2,2,2],
+			[2,0,2,0,2],
+			[2,0,2,0,2],
+			[2,0,2,0,2]
+		]
+	},
+	{
+		"id": 138,
+		"rarity": 1,
+		"name_jp": "タコストライプ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[2,0,0,0],
+			[0,2,2,0],
+			[2,2,2,2],
+			[2,2,2,2],
+			[0,2,3,0]
+		]
+	},
+	{
+		"id": 139,
+		"rarity": 2,
+		"name_jp": "タコゾネス",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,2,0,2,0],
+			[0,2,2,2,0],
+			[0,2,3,2,0],
+			[2,0,2,0,2]
+		]
+	},
+	{
+		"id": 140,
+		"rarity": 3,
+		"name_jp": "DJタコワサ将軍",
+		"name_en": "",
+		"block_num": 17,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 40,
+		"blocks": [
+			[0,2,0,0,0,0],
+			[2,2,2,2,0,0],
+			[0,2,2,2,0,2],
+			[0,2,2,3,2,0],
+			[0,0,0,2,0,2],
+			[0,0,2,0,2,0]
+		]
+	},
+	{
+		"id": 141,
+		"rarity": 1,
+		"name_jp": "シャケ",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 72,
+		"blocks": [
+			[0,2,0],
+			[3,2,0],
+			[0,2,2]
+		]
+	},
+	{
+		"id": 142,
+		"rarity": 1,
+		"name_jp": "ドスコイ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 72,
+		"blocks": [
+			[0,0,2,0],
+			[0,2,2,0],
+			[3,2,2,0],
+			[0,2,2,2]
+		]
+	},
+	{
+		"id": 143,
+		"rarity": 1,
+		"name_jp": "タマヒロイ",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 72,
+		"blocks": [
+			[0,2,0],
+			[2,2,0],
+			[0,2,0],
+			[2,0,3]
+		]
+	},
+	{
+		"id": 144,
+		"rarity": 1,
+		"name_jp": "バクダン",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,3,0,0,0],
+			[2,2,2,0,0],
+			[0,2,2,2,0],
+			[0,0,2,2,0],
+			[0,0,2,2,2]
+		]
+	},
+	{
+		"id": 145,
+		"rarity": 1,
+		"name_jp": "ヘビ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 72,
+		"blocks": [
+			[2,3,2,2,2,2,0],
+			[2,2,0,0,0,2,2]
+		]
+	},
+	{
+		"id": 146,
+		"rarity": 1,
+		"name_jp": "テッパン",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 72,
+		"blocks": [
+			[0,0,2,3,0,0],
+			[2,0,2,2,0,2],
+			[0,2,2,2,2,0]
+		]
+	},
+	{
+		"id": 147,
+		"rarity": 1,
+		"name_jp": "タワー",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 72,
+		"blocks": [
+			[3,2],
+			[0,2],
+			[0,2],
+			[0,2],
+			[0,2],
+			[0,2]
+		]
+	},
+	{
+		"id": 148,
+		"rarity": 1,
+		"name_jp": "モグラ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,2,0,0,2,0],
+			[2,2,0,0,2,2],
+			[2,2,2,2,3,2]
+		]
+	},
+	{
+		"id": 149,
+		"rarity": 1,
+		"name_jp": "コウモリ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[2,2,2,2,2],
+			[2,0,3,0,2]
+		]
+	},
+	{
+		"id": 150,
+		"rarity": 1,
+		"name_jp": "カタパッド",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[2,2,0,2,2],
+			[2,2,3,2,2],
+			[2,2,0,2,2]
+		]
+	},
+	{
+		"id": 151,
+		"rarity": 1,
+		"name_jp": "ハシラ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 72,
+		"blocks": [
+			[2,2,0,2,2],
+			[0,0,2,0,0],
+			[0,0,2,0,0],
+			[0,0,2,0,0],
+			[0,0,3,0,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 152,
+		"rarity": 1,
+		"name_jp": "ダイバー",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,2,0,2],
+			[0,0,2,0],
+			[2,2,2,0],
+			[0,2,2,2],
+			[0,3,2,0],
+			[0,0,2,0]
+		]
+	},
+	{
+		"id": 153,
+		"rarity": 1,
+		"name_jp": "ナベブタ",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 72,
+		"blocks": [
+			[0,0,3,0,0],
+			[2,2,2,2,2]
+		]
+	},
+	{
+		"id": 154,
+		"rarity": 1,
+		"name_jp": "テッキュウ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,0,0,2,0,0],
+			[0,0,2,2,2,0],
+			[3,2,0,2,2,0],
+			[2,2,0,2,2,2]
+		]
+	},
+	{
+		"id": 155,
+		"rarity": 2,
+		"name_jp": "キンジャケ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,0,2,0,0],
+			[2,2,0,0,0],
+			[0,2,0,2,0],
+			[2,2,3,0,2],
+			[0,2,2,2,0]
+		]
+	},
+	{
+		"id": 156,
+		"rarity": 2,
+		"name_jp": "グリル",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,2,2,2,2],
+			[3,2,2,2,2],
+			[0,0,2,2,0],
+			[0,2,0,0,2]
+		]
+	},
+	{
+		"id": 157,
+		"rarity": 2,
+		"name_jp": "ハコビヤ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[2,2,2,2,2],
+			[2,2,2,2,2],
+			[0,0,2,0,0],
+			[0,0,3,0,0]
+		]
+	},
+	{
+		"id": 158,
+		"rarity": 2,
+		"name_jp": "ドロシャケ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,2,0],
+			[2,0,2],
+			[2,0,2],
+			[2,0,2],
+			[2,3,2],
+			[2,2,2]
+		]
+	},
+	{
+		"id": 159,
+		"rarity": 1,
+		"name_jp": "デンチナマズ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 40,
+		"blocks": [
+			[0,0,0,2],
+			[0,2,2,0],
+			[0,2,3,2],
+			[2,0,2,2]
+		]
+	},
+	{
+		"id": 160,
+		"rarity": 2,
+		"name_jp": "ガチヤグラ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 128,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,0,2,0,0],
+			[2,2,3,2,2],
+			[0,2,2,2,0],
+			[0,2,2,2,0]
+		]
+	},
+	{
+		"id": 161,
+		"rarity": 2,
+		"name_jp": "ガチホコ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 72,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,0,0,0],
+			[0,2,3,2,2],
+			[2,2,2,2,0],
+			[0,0,0,2,2]
+		]
+	},
+	{
+		"id": 162,
+		"rarity": 2,
+		"name_jp": "ガチアサリ",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 72,
+		"blocks": [
+			[0,3,2,2,0],
+			[2,2,2,2,2],
+			[0,2,2,2,0]
 		]
 	},
 	{
@@ -801,6 +2583,7 @@
 		"block_num": 4,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[2,3,2],
 			[0,0,2]
@@ -814,6 +2597,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,3,2],
 			[2,2,2,2],
@@ -828,6 +2612,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,3,2,2],
 			[2,2,2,2],
@@ -842,6 +2627,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,3,2,0,0,0],
 			[2,2,2,2,2,2],
@@ -856,6 +2642,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,0],
 			[2,2,2,2,3],
@@ -870,6 +2657,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[3,0,0,0],
 			[0,2,2,2],
@@ -885,6 +2673,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2],
 			[0,3,2,0],
@@ -899,6 +2688,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,3,2,2],
 			[0,0,2,2,0,0],
@@ -913,6 +2703,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,3,0,0,0],
 			[2,2,0,0,0],
@@ -929,6 +2720,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,2,0,0,0,0,0],
 			[2,2,2,2,2,3,2],
@@ -943,6 +2735,7 @@
 		"block_num": 6,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,0,2],
 			[2,3,0],
@@ -957,6 +2750,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[3,2,2,2,2],
 			[0,0,0,2,2]
@@ -970,6 +2764,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2],
 			[3,0,2],
@@ -984,6 +2779,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,0,3,2],
 			[2,2,2,2],
@@ -998,6 +2794,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[0,2,0,0],
 			[3,2,2,2],
@@ -1012,6 +2809,7 @@
 		"block_num": 5,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[2,3,2,2],
 			[0,0,0,2]
@@ -1025,6 +2823,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[3,2,2,2,2,2],
 			[0,0,2,2,2,0],
@@ -1039,6 +2838,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,3,2],
 			[0,0,0,0,0,2],
@@ -1053,6 +2853,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,0],
 			[3,2,2,2],
@@ -1067,6 +2868,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,3,2,2],
 			[0,2,2,2],
@@ -1081,6 +2883,7 @@
 		"block_num": 7,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2],
 			[0,0,2,2],
@@ -1095,6 +2898,7 @@
 		"block_num": 9,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[2,2,3,2,2],
 			[2,2,2,0,0],
@@ -1109,6 +2913,7 @@
 		"block_num": 8,
 		"sp_block_num": 1,
 		"sp_point": 3,
+		"category": 1,
 		"blocks": [
 			[2,2,2,2,2,2,2],
 			[0,0,0,0,3,0,0]
@@ -1122,6 +2927,7 @@
 		"block_num": 10,
 		"sp_block_num": 1,
 		"sp_point": 4,
+		"category": 1,
 		"blocks": [
 			[0,0,0,3,2,0,0],
 			[2,2,2,2,2,2,2],
@@ -1136,10 +2942,198 @@
 		"block_num": 5,
 		"sp_block_num": 1,
 		"sp_point": 2,
+		"category": 1,
 		"blocks": [
 			[0,2],
 			[3,2],
 			[2,2]
+		]
+	},
+	{
+		"id": 188,
+		"rarity": 2,
+		"name_jp": "テイオウイカ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,0,0,0,0,0],
+			[0,2,2,2,0,0],
+			[0,2,2,0,0,0],
+			[0,2,0,2,2,0],
+			[0,0,0,2,0,2],
+			[0,0,0,0,2,0]
+		]
+	},
+	{
+		"id": 189,
+		"rarity": 2,
+		"name_jp": "デコイチラシ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 0,
+		"sp_point": 3,
+		"category": 4,
+		"blocks": [
+			[2,2,2,0,0],
+			[2,2,2,0,0],
+			[2,2,2,0,2],
+			[0,0,0,2,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 190,
+		"rarity": 2,
+		"name_jp": "マメブキチ&ツブブキチ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,0,2,2,2],
+			[0,0,0,3,2,0],
+			[0,0,0,2,0,0],
+			[2,2,2,0,0,0],
+			[2,2,0,0,0,0],
+			[2,0,0,0,0,0]
+		]
+	},
+	{
+		"id": 191,
+		"rarity": 2,
+		"name_jp": "アネモ",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[2,0,2,0,2],
+			[0,3,0,2,0],
+			[2,0,2,0,2],
+			[0,2,2,2,0],
+			[2,0,0,0,2]
+		]
+	},
+	{
+		"id": 192,
+		"rarity": 2,
+		"name_jp": "エチゼン",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,3,2,2,0],
+			[2,0,2,0,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 193,
+		"rarity": 2,
+		"name_jp": "アジオ",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 8,
+		"blocks": [
+			[0,2,0,0,0],
+			[2,2,0,0,0],
+			[0,0,2,3,2],
+			[0,0,2,2,2],
+			[0,0,2,2,0]
+		]
+	},
+	{
+		"id": 194,
+		"rarity": 2,
+		"name_jp": "ダウニー",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[2,0,2,0,2],
+			[0,2,0,2,0],
+			[2,0,2,0,2],
+			[0,2,0,3,0],
+			[2,0,2,0,2]
+		]
+	},
+	{
+		"id": 195,
+		"rarity": 3,
+		"name_jp": "踊るギャングスターウツホ",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,2,2,2,0,0],
+			[2,2,3,2,2,2],
+			[0,0,0,0,0,2],
+			[0,0,2,2,2,2]
+		]
+	},
+	{
+		"id": 196,
+		"rarity": 3,
+		"name_jp": "サメ使いのフウカ",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,0,0,2,0,0],
+			[2,2,2,2,2,0,2],
+			[0,2,2,3,2,2,0],
+			[0,0,0,2,0,0,2]
+		]
+	},
+	{
+		"id": 197,
+		"rarity": 3,
+		"name_jp": "ふしぎせいぶつマンタロー",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 40,
+		"blocks": [
+			[0,0,0,0,2,0],
+			[0,0,2,2,2,0],
+			[0,2,2,3,0,0],
+			[0,2,2,2,0,0],
+			[2,2,0,0,2,0],
+			[0,0,0,0,0,2]
+		]
+	},
+	{
+		"id": 198,
+		"rarity": 2,
+		"name_jp": "エゾッコリー",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 16,
+		"blocks": [
+			[0,2,2,2],
+			[0,0,0,2],
+			[0,3,2,2],
+			[2,2,2,2]
 		]
 	}
 ]

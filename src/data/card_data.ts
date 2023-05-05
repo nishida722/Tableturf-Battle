@@ -9,6 +9,7 @@ export default class CardData
     block_num : number;
     sp_block_num : number;
     sp_point : number;
+    category : number;
     blocks : number[][];
 
     private block_height : number;
@@ -25,6 +26,7 @@ export default class CardData
         this.block_num = data.block_num;
         this.sp_block_num = data.sp_block_num;
         this.sp_point = data.sp_point;
+        this.category = data.category;
         this.blocks = data.blocks;
 
         this.block_height = this.blocks.length;

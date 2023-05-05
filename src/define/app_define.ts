@@ -35,4 +35,21 @@ export default class AppDefine
         Quiz : "Quiz",
         Result : "Result",
     }
+
+    // カードカテゴリ(ビット演算)
+    static readonly CardCategory = {
+        MainWeapon : 1 << 0,
+        SubWeapon : 1 << 1,
+        SpecialWeapon : 1 << 2,
+        Character : 1 << 3,
+        Brand : 1 << 4,
+        HeroMode : 1 << 5,
+        SalmonRun : 1 << 6,
+        GachiRule : 1 << 7,
+
+        // すべてに一致する
+        All : 0xffffffff,
+    }
+
+
 }

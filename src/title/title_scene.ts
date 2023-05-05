@@ -96,7 +96,7 @@ export default class Title extends Phaser.Scene
         const button_height = 50;
         const button_list : CmnButton<any>[] = [];
 
-        const base_main_weapons_button = new CmnButton(this, button_width, button_height, 'ブキ編', { mode : AppDefine.QuizMode.BaseMainWeapons, name : "ブキ編" });
+        const base_main_weapons_button = new CmnButton(this, button_width, button_height, 'ブキ編', {card_category : AppDefine.CardCategory.MainWeapon, mode : AppDefine.QuizMode.BaseMainWeapons, name : "ブキ編" });
         base_main_weapons_button.on_click = this.onSelectMenu;
         menu_container.add(base_main_weapons_button);
         button_list.push(base_main_weapons_button);
@@ -140,7 +140,7 @@ export default class Title extends Phaser.Scene
         }
 
         const card_scale = 1.5;
-        this.card = new Card(this, this.card_data_manager.getRandom(1)[0]);
+        this.card = new Card(this, this.card_data_manager.getRandom(AppDefine.CardCategory.All, 1)[0]);
         this.card.setScale(0, card_scale);
         this.card.setSelect(true);
         this.add.existing(this.card);

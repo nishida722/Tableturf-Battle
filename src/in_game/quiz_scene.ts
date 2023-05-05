@@ -258,7 +258,7 @@ export default class Quiz extends Phaser.Scene
             ease: 'Cubic.easeOut',
         });
 
-        const card_list = this.card_data_manager.getQuiz(this.answer_num, this.exclude_list);
+        const card_list = this.card_data_manager.getQuiz(this.scene_data.card_category , this.answer_num, this.exclude_list);
 
         if(this.card)
         {

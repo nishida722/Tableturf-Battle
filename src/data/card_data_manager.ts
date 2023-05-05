@@ -21,10 +21,10 @@ export default class CardDataManager
         return this.card_data_dict[id];
     }
 
-    getRandom(num : number, exclude_list? : number[]) : CardData[]
+    getRandom(category : number, num : number, exclude_list? : number[]) : CardData[]
     {
         const result_list : CardData[] = [];
-        const card_data_list = AppUtility.shuffle(Object.keys(this.card_data_dict).map(key => this.card_data_dict[key]));
+        const card_data_list = AppUtility.shuffle(this.getCardDataListByCategory(category));
 
         // numの数だけランダムにカードを選ぶ(ただし除外リストに入っているものは除く)
         for(let i = 0; i < card_data_list.length; i++)
@@ -45,10 +45,10 @@ export default class CardDataManager
         return result_list;
     }
 
-    getQuiz(num : number, exclude_list? : number[]) : CardData[]
+    getQuiz(category : number, num : number, exclude_list? : number[]) : CardData[]
     {
         let result_list : CardData[] = [];
-        const card_data_list = AppUtility.shuffle(Object.keys(this.card_data_dict).map(key => this.card_data_dict[key]));
+        const card_data_list = AppUtility.shuffle(this.getCardDataListByCategory(category));
 
         // まずはブロック数±1のものを選ぶ
         result_list = this.createQuiz(num, result_list, card_data_list, exclude_list, 1);
@@ -101,6 +101,21 @@ export default class CardDataManager
 
             result_list.push(card_data_list[i]);
         }
+
+        return result_list;
+    }
+
+    // 指定したCardCategoryのカード一覧を取得する
+    getCardDataListByCategory(category : number) : CardData[]
+    {
+        const result_list : CardData[] = [];
+
+        Object.keys(this.card_data_dict).map(key => this.card_data_dict[key]).forEach(card_data => {
+            if((card_data.category & category) > 0)
+            {
+                result_list.push(card_data);
+            }
+        });
 
         return result_list;
     }
