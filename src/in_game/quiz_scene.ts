@@ -157,7 +157,7 @@ export default class Quiz extends Phaser.Scene
         button_container.add(this.quiz_message_info);
 
         this.button_list = [];
-        const button_width = AppDefine.SIZE_WIDTH_SCREEN * 0.8;
+        const button_width = AppDefine.SIZE_WIDTH_SCREEN * 0.9;
         const button_height = 50;
 
         for (let i = 0; i < this.answer_num; i++)
