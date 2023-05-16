@@ -3135,5 +3135,181 @@
 			[0,3,2,2],
 			[2,2,2,2]
 		]
+	},
+	{
+		"id": 199,
+		"rarity": 1,
+		"name_jp": "キャンピングシェルター・ソレーラ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 1,
+		"blocks": [
+			[0,2,2,0],
+			[2,2,0,0],
+			[2,3,2,0],
+			[2,2,0,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 200,
+		"rarity": 1,
+		"name_jp": "デュアルスイーパーカスタム",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,0,0,2,2],
+			[2,2,2,2,2],
+			[0,0,0,0,3],
+			[0,0,0,2,2]
+		]
+	},
+	{
+		"id": 201,
+		"rarity": 1,
+		"name_jp": "クアッドホッパーホワイト",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 1,
+		"blocks": [
+			[2,3,2,0],
+			[2,2,0,2],
+			[0,2,2,0]
+		]
+	},
+	{
+		"id": 202,
+		"rarity": 1,
+		"name_jp": "バレルスピナーデコ",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 1,
+		"blocks": [
+			[0,0,0,2,2],
+			[0,0,0,2,2],
+			[0,0,0,2,2],
+			[0,0,2,2,0],
+			[0,3,2,0,0],
+			[2,2,0,0,0]
+		]
+	},
+	{
+		"id": 203,
+		"rarity": 1,
+		"name_jp": "H3リールガンD",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 1,
+		"blocks": [
+			[2,3,2,2,2],
+			[0,0,0,2,2],
+			[0,0,0,0,2]
+		]
+	},
+	{
+		"id": 204,
+		"rarity": 1,
+		"name_jp": "Rブラスターエリートデコ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,2,2,2],
+			[0,0,3,2,2],
+			[0,0,0,0,2]
+		]
+	},
+	{
+		"id": 205,
+		"rarity": 1,
+		"name_jp": "S-BLAST92",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,0,2,2,3],
+			[2,2,2,2,2],
+			[0,2,0,0,0]
+		]
+	},
+	{
+		"id": 206,
+		"rarity": 1,
+		"name_jp": "フィンセント",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,0,0,2,0,0],
+			[0,0,0,2,3,0],
+			[0,0,0,2,2,2],
+			[0,2,2,0,0,0],
+			[0,2,0,0,0,0],
+			[2,0,0,0,0,0]
+		]
+	},
+	{
+		"id": 207,
+		"rarity": 1,
+		"name_jp": "ドライブワイパーデコ",
+		"name_en": "",
+		"block_num": 5,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 1,
+		"blocks": [
+			[2],
+			[3],
+			[2],
+			[2],
+			[2]
+		]
+	},
+	{
+		"id": 208,
+		"rarity": 1,
+		"name_jp": "スペースシューターコラボ",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,2,2,2,2],
+			[3,2,2,2,2],
+			[0,0,0,2,0]
+		]
+	},
+	{
+		"id": 209,
+		"rarity": 1,
+		"name_jp": "ワイドローラーコラボ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,3,2,2,2],
+			[0,0,2,2,0,0],
+			[0,0,0,2,0,0]
+		]
 	}
 ]
