@@ -3687,5 +3687,325 @@
 			[2,2,0,0,0,0],
 			[2,0,0,0,0,0]
 		]
+	},
+	{
+		"id": 233,
+		"rarity": 3,
+		"name_jp": "オーダーマニューバー",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 1,
+		"blocks": [
+			[0,2,2,2],
+			[3,0,2,0],
+			[0,2,0,0]
+		]
+	},
+	{
+		"id": 234,
+		"rarity": 3,
+		"name_jp": "イイダ",
+		"name_en": "",
+		"block_num": 18,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 8,
+		"blocks": [
+			[0,2,2,2,0,3],
+			[2,2,0,2,2,0],
+			[2,2,0,2,2,0],
+			[0,2,2,2,0,0],
+			[2,0,2,0,2,0]
+		]
+	},
+	{
+		"id": 235,
+		"rarity": 3,
+		"name_jp": "ヒメ",
+		"name_en": "",
+		"block_num": 18,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 8,
+		"blocks": [
+			[0,2,0,2,0,0],
+			[2,0,2,2,2,0],
+			[0,2,2,0,2,2],
+			[0,0,2,0,2,0],
+			[0,0,2,2,2,0],
+			[0,2,0,2,0,3]
+		]
+	},
+	{
+		"id": 236,
+		"rarity": 3,
+		"name_jp": "ヒメドローン",
+		"name_en": "",
+		"block_num": 6,
+		"sp_block_num": 1,
+		"sp_point": 2,
+		"category": 8,
+		"blocks": [
+			[0,0,0,2],
+			[0,3,2,0],
+			[0,2,2,0],
+			[2,0,0,0]
+		]
+	},
+	{
+		"id": 237,
+		"rarity": 2,
+		"name_jp": "ミズタ",
+		"name_en": "",
+		"block_num": 16,
+		"sp_block_num": 1,
+		"sp_point": 6,
+		"category": 8,
+		"blocks": [
+			[0,2,2,2,0],
+			[2,0,2,0,2],
+			[2,2,0,2,2],
+			[0,2,2,2,0],
+			[2,0,3,0,2]
+		]
+	},
+	{
+		"id": 238,
+		"rarity": 2,
+		"name_jp": "ユメエビ",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[2,0,0,0,2,0],
+			[0,2,2,2,0,0],
+			[0,0,2,0,0,0],
+			[0,0,2,3,2,2],
+			[0,0,2,2,2,0],
+			[0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 239,
+		"rarity": 2,
+		"name_jp": "ミウラ",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,0,0,2,0],
+			[0,0,3,2,0,0],
+			[2,2,2,2,2,2],
+			[0,0,2,2,0,0],
+			[0,2,0,0,2,0]
+		]
+	},
+	{
+		"id": 240,
+		"rarity": 2,
+		"name_jp": "ビゼン",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,0,2,0,0],
+			[0,2,2,2,0],
+			[0,2,2,3,0],
+			[2,0,2,0,2],
+			[0,2,0,2,0]
+		]
+	},
+	{
+		"id": 241,
+		"rarity": 2,
+		"name_jp": "シガニー",
+		"name_en": "",
+		"block_num": 14,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 8,
+		"blocks": [
+			[0,2,0,0,0,0],
+			[2,2,2,2,0,0],
+			[0,2,3,0,2,0],
+			[0,2,0,2,0,2],
+			[0,0,2,0,2,0],
+			[0,0,0,2,0,0]
+		]
+	},
+	{
+		"id": 242,
+		"rarity": 1,
+		"name_jp": "ガエンFF",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,2,2,2,2],
+			[0,2,0,2,0,0],
+			[3,2,2,0,0,0]
+		]
+	},
+	{
+		"id": 243,
+		"rarity": 1,
+		"name_jp": "24式張替傘・甲",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,3,2],
+			[0,0,2,2],
+			[0,2,0,2],
+			[2,0,0,2]
+		]
+	},
+	{
+		"id": 244,
+		"rarity": 1,
+		"name_jp": ".52ガロンデコ",
+		"name_en": "",
+		"block_num": 7,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 1,
+		"blocks": [
+			[3,2,2,2],
+			[0,2,2,0],
+			[0,0,0,2]
+		]
+	},
+	{
+		"id": 245,
+		"rarity": 1,
+		"name_jp": "ヴァリアブルローラーフォイル",
+		"name_en": "",
+		"block_num": 10,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,3,2,2],
+			[0,2,2,0,0],
+			[0,2,2,0,0],
+			[0,0,2,0,0]
+		]
+	},
+	{
+		"id": 246,
+		"rarity": 1,
+		"name_jp": "スクイックリンβ",
+		"name_en": "",
+		"block_num": 8,
+		"sp_block_num": 1,
+		"sp_point": 3,
+		"category": 1,
+		"blocks": [
+			[2,2,2,2,2,2],
+			[0,0,0,0,3,2]
+		]
+	},
+	{
+		"id": 247,
+		"rarity": 1,
+		"name_jp": "リッター4Kカスタム",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[2,2,2,2,2,2,2],
+			[0,3,0,0,2,2,2]
+		]
+	},
+	{
+		"id": 248,
+		"rarity": 1,
+		"name_jp": "4Kスコープカスタム",
+		"name_en": "",
+		"block_num": 13,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 1,
+		"blocks": [
+			[0,0,3,2,0,0,0],
+			[2,2,2,2,2,2,2],
+			[0,2,0,0,2,2,2]
+		]
+	},
+	{
+		"id": 249,
+		"rarity": 1,
+		"name_jp": "エクスプロッシャーカスタム",
+		"name_en": "",
+		"block_num": 11,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,2,0,0,2],
+			[0,2,2,2,2],
+			[3,2,2,2,2]
+		]
+	},
+	{
+		"id": 250,
+		"rarity": 1,
+		"name_jp": "モップリンD",
+		"name_en": "",
+		"block_num": 12,
+		"sp_block_num": 1,
+		"sp_point": 5,
+		"category": 1,
+		"blocks": [
+			[0,2,2,0],
+			[0,2,2,2],
+			[3,2,2,0],
+			[2,2,2,2]
+		]
+	},
+	{
+		"id": 251,
+		"rarity": 1,
+		"name_jp": "ノーチラス79",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,0,0,2,2],
+			[0,0,0,2,2],
+			[3,2,2,2,2]
+		]
+	},
+	{
+		"id": 252,
+		"rarity": 1,
+		"name_jp": "ケルビン525デコ",
+		"name_en": "",
+		"block_num": 9,
+		"sp_block_num": 1,
+		"sp_point": 4,
+		"category": 1,
+		"blocks": [
+			[0,2,0,0],
+			[3,2,2,2],
+			[0,2,2,0],
+			[0,2,2,0]
+		]
 	}
 ]
