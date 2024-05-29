@@ -49,7 +49,7 @@ export default class Title extends Phaser.Scene
         this.setupCard();
 
         // 免責事項を表すテキスト
-        const ver_text = new Phaser.GameObjects.Text(this, 0, 230, `ver1.4.0`, { color: '#0000ff', fontSize: '12px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
+        const ver_text = new Phaser.GameObjects.Text(this, 0, 230, `ver1.5.0`, { color: '#0000ff', fontSize: '12px' ,fontFamily: AppDefine.DefaultFontFamily}).setOrigin(0.5, 0.5);
         this.add.existing(ver_text);
         Phaser.Display.Align.In.TopRight(ver_text, this.zone, 0, 0);
 
